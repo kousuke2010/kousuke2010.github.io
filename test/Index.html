@@ -33,8 +33,8 @@
 			writeSpan("quote_abxs_lastPr","quote_abxs_changeRate");
 			document.write('</td></tr><tr><td></td></tr></table>');
 
-			ajaxFunction2('GET', 'http://www.pmec.com/flash/data/'+ codePara + '.xml?key=' + codePara + '&=' + Math.random());
-			window.setInterval("ajaxFunction2('GET', 'http://www.pmec.com/flash/data/'+ codePara + '.xml?key=' + codePara + '&=' + Math.random());", 10000);
+			ajaxFunction2('GET', 'data/'+ codePara + '.xml?key=' + codePara + '&=' + Math.random());
+			window.setInterval("ajaxFunction2('GET', 'data/'+ codePara + '.xml?key=' + codePara + '&=' + Math.random());", 10000);
 
 			var parastr="code="+getQueryString("code")+"&sw="+getQueryString("sw")+"&sh="+getQueryString("sh")+"&tt="+getQueryString("tt");
 			//if(codePara==null) { parastr="code=100_XAUUSD&sw=450&sh=175&tt=50"};
