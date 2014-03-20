@@ -33,8 +33,8 @@
 			writeSpan("quote_abxs_lastPr","quote_abxs_changeRate");
 			document.write('</td></tr><tr><td></td></tr></table>');
 
-			ajaxFunction2('GET', 'data/'+ codePara + '.xml?key=' + codePara + '&=' + Math.random());
-			window.setInterval("ajaxFunction2('GET', 'data/'+ codePara + '.xml?key=' + codePara + '&=' + Math.random());", 10000);
+			ajaxFunction2('GET', 'http://www.pmec.com/flash/data/'+ codePara + '.xml?key=' + codePara + '&=' + Math.random());
+			window.setInterval("ajaxFunction2('GET', 'http://www.pmec.com/flash/data/'+ codePara + '.xml?key=' + codePara + '&=' + Math.random());", 10000);
 
 			var parastr="code="+getQueryString("code")+"&sw="+getQueryString("sw")+"&sh="+getQueryString("sh")+"&tt="+getQueryString("tt");
 			//if(codePara==null) { parastr="code=100_XAUUSD&sw=450&sh=175&tt=50"};
@@ -47,7 +47,7 @@
 			var params = {};
 			params.quality = "high";
 			params.bgcolor = "#ffffff";
-			params.allowscriptaccess = "sameDomain";
+
 			params.allowfullscreen = "true";
 			var attributes = {};
 			attributes.id = "QuoteChart";
@@ -82,13 +82,13 @@
 				<param name="movie" value="QuoteChart.swf" />
 				<param name="quality" value="high" />
 				<param name="bgcolor" value="#ffffff" />
-				<param name="allowScriptAccess" value="sameDomain" />
+
 				<param name="allowFullScreen" value="true" />
 				<!--[if !IE]>-->
 				<object type="application/x-shockwave-flash" data="QuoteChart.swf" width="100%" height="100%">
 					<param name="quality" value="high" />
 					<param name="bgcolor" value="#ffffff" />
-					<param name="allowScriptAccess" value="sameDomain" />
+
 					<param name="allowFullScreen" value="true" />
 					<!--<![endif]-->
 					<!--[if gte IE 6]>-->
