@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	function encodeAll(str) {//转化为十六进制
+		var HEX = "0123456789ABCDEF",
+		radix = 16,
+		len = str.length,
+		encodeStr = "";
+		for (var i = 0; i < len; i++) {
+			var num = parseInt(str.charCodeAt(i), 10);
+			encodeStr += "%" + Math.floor(num / radix) + HEX.charAt(num % radix);
+		}
+		return encodeStr;
+	}
+
+	var yang="%3Cp%20%3E%3Cstrong%3E%u4EC0%u4E48%u662F%u7EA2%u9152%u6728%u74DC%u9753%u6C64%uFF1F%3C/strong%3E%3C/p%3E%0A%09%09%3Cp%20%20class%3D%22zjc%22%3E%u62DC%u8FEA%u857E%u5A1C%u7EA2%u9152%u6728%u74DC%u9753%u6C64%u7531%u97E9%u56FD%u5E86%u7199%u5927%u5B66%u5973%u6027%u751F%u7406%u7814%u7A76%u9662%u3001%u97E9%u56FDBEAUT%20YLINE%u7CBE%u7EC6%u5316%u5DE5%u682A%u5F0F%u4F1A%u793E%u8054%u5408%u7814%u53D1%u3002%u76EE%u524D%u5DF2%u5728%u97E9%u56FD%u3001%u65E5%u672C%u3001%u65B0%u52A0%u5761%u3001%u6CF0%u56FD%u7B49%u56FD%u5BB6%u7545%u95005%u5E74%u4E4B%u4E45%uFF0C2009%u5E74%u5F15%u8FDB%u4E2D%u56FD%uFF0C%u5E76%u4E14%u5927%u91CF%u6295%u5165%u751F%u4EA7%u3002%3C/p%3E";
+
+	var a=encodeAll(yang);
+
+	document.write(a);
+</script>
+</body>
+</html>

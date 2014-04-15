@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>代码加密功能汇总</title>
+<style>.box{width:810px;margin: 8px auto;border: 2px dashed #555;padding: 20px;color:#f00}</style>
+</head>
+<body>
+<div class="box box1">
+	<h1>代码加密功能汇总</h1>
+	<p>请放入需要加密的代码：</p>
+	<textarea type="text" onKeyup="javascript:huizong(this);" style="width:800px;height:100px;"></textarea>
+	<p>以下加密代码的调用和使用的方法：</p>
+	<p>1、在主页面文件body闭合标签前加入decode.js的调用代码，如下；</p>
+	<textarea id="tianjia" type="text"  style="width:800px;height:24px;"></textarea>
+	<p>2、将再次进行16进制加密的的代码以下方代码的形式放入head闭合标签前：</p>
+	<textarea id="tianjia2" type="text"  style="width:800px;height:100px;"></textarea>
+	<p>3、在需要进行调用的地方放入以下代码，名称请自行定义，不允许重复：</p>
+	<textarea id="diaoyong" type="text"  style="width:800px;height:100px;"></textarea>
+</div>
+<div class="box box2">
+	<p>以下是decode.js中的内容：</p>
+	<p><script>document.write('function decodeAll(encodeStr){var arr = encodeStr.split("%"),str = "";for (var i = 1; arr[i]; i++){str += String.fromCharCode(parseInt(arr[i], 16));}return str;}')</script></p>
+	<p>也可以直接进行该文件的下载：<a href="http://url.cn/QxfaZF">decode.js</a></p>
+</div>
+<div class="box box3">
+	<p>以下是加密过后的js代码：</p>
+	<textarea id="jiami" type="text"  style="width:800px;height:100px;"></textarea>
+	<p>以下是加密过后的js并再次进行16进制加密过后的代码：</p>
+	<textarea id="zaijiami" type="text"  style="width:800px;height:100px;"></textarea>
+</div>
+<script>
+function huizong(word){
+	var word=word.value;
+	var innerCode=escape(word);
+	var word=document.getElementById("jiami");
+	word.innerHTML=innerCode;
+
+	var HEX = "0123456789ABCDEF",
+	radix = 16;
+	len = innerCode.length,
+	encodeStr = "";
+	for (var i = 0; i < len; i++) {
+		var num = parseInt(innerCode.charCodeAt(i), 10);
+		encodeStr += "%" + Math.floor(num / radix) + HEX.charAt(num % radix);
+	}
+	encodeStr=encodeStr.toString();
+	var zjm=document.getElementById("zaijiami");
+	zjm.innerHTML=encodeStr;
+
+	var daima1='<script src="js\/decode.js" type="text/javascript"><\/script>';
+	var tj=document.getElementById("tianjia");
+	tj.innerHTML=daima1;
+
+	var daima2='<script>var 请输入该串加密代码的变量名="'+encodeStr+'";<\/script>';
+	var tj2=document.getElementById("tianjia2");
+	tj2.innerHTML=daima2;
+
+	var fangfa="<script>var 请输入本次调用名称=decodeAll(请输入对应加密代码的变量名);document.write(unescape(请输入本次调用名称));<\/script>";
+	var dy=document.getElementById("diaoyong");
+	dy.innerHTML=fangfa;
+}
+</script>
+</body>
+</html>

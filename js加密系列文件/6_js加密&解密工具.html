@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>js加密&解密工具</title>
+<script>
+function jiami(word){
+	var word=word.value;
+	var innerCode=escape(word);
+	var word=document.getElementById("indiv");
+	word.innerHTML=innerCode;
+}
+function jiemi(code){
+	var code=code.value;
+	var innerWord=unescape(code);
+	var code=document.getElementById("indiv");
+	code.innerHTML=innerWord;
+}
+</script>
+</head>
+<body>
+请放入需要js加密的代码：<br />
+<textarea type="text" onKeyup="javascript:jiami(this);" style="width:800px;height:200px;"></textarea><br />
+请通过双击下方代码进行全选：<br />
+<textarea id="indiv" type="text"  style="width:800px;height:200px;"></textarea><br />
+请放入需要js解密的代码：<br />
+<textarea type="text" onKeyup="javascript:jiemi(this);" style="width:800px;height:200px;"></textarea>
+</body>
+</html>

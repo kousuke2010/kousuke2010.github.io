@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>测试已加密js代码的工具</title>
+<script>
+function jiemi(obj1){
+	var obj1=obj1.value;
+	var obj1=document.getElementById("outdiv");
+	obj1.innerHTML=unescape(obj1);
+}
+</script>
+</head>
+<body>
+请放入已加密的js进行测试：<br />
+<textarea type="text" onKeyup="javascript:jiemi(this);" style="width:800px;height:200px;"></textarea><br />
+请通过双击下方代码进行全选：<br />
+<textarea id="outdiv" type="text" style="width:800px;height:200px;"></textarea>
+</body>
+</html>

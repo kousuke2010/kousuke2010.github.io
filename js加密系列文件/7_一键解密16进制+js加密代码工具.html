@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>一键解密16进制+js加密代码工具</title>
+<script>
+function jiemi(word){
+	var word=word.value;
+	var arr = word.split("%"),
+	str = "";
+	for (var i = 1; arr[i]; i++) {
+		str += String.fromCharCode(parseInt(arr[i], 16));
+	}
+	var innerCode=unescape(str);
+	var obj=document.getElementById("outdiv");
+	obj.innerHTML=innerCode;
+}
+</script>
+</head>
+<body>
+<h1>一键解密16进制+js加密代码工具</h1>
+请放入已经进行16进制+js加密的代码：<br />
+<textarea type="text" onKeyup="javascript:jiemi(this);" style="width:800px;height:200px;"></textarea><br />
+请通过双击全选下方代码：<br />
+<textarea id="outdiv" type="text"  style="width:800px;height:200px;"></textarea><br />
+</body>
+</html>

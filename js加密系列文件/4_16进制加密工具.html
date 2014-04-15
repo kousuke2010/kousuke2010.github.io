@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>16进制加密工具</title>
+<script>
+function senddata(inputobj){
+	var HEX = "0123456789ABCDEF",
+	radix = 16;
+	var inputobj=inputobj.value;
+	len = inputobj.length,
+	encodeStr = "";
+	for (var i = 0; i < len; i++) {
+		var num = parseInt(inputobj.charCodeAt(i), 10);
+		encodeStr += "%" + Math.floor(num / radix) + HEX.charAt(num % radix);
+	}
+	encodeStr=encodeStr.toString();
+	var obj=document.getElementById("outdiv");
+	obj.innerHTML=encodeStr;
+}
+</script>
+</head>
+<body>
+请放入已加密的js进行16进制解密：<br />
+<textarea type="text" onKeyup="javascript:senddata(this);" style="width:800px;height:200px;"></textarea><br />
+请通过双击下方代码进行全选：<br />
+<textarea id="outdiv" type="text" style="width:800px;height:200px;"></textarea>
+</body>
+</html>

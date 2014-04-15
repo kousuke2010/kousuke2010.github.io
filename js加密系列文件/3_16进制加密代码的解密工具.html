@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>16进制加密代码的解密工具</title>
+<script>
+function senddata(inputobj){
+	var inputobj=inputobj.value;
+	var arr = inputobj.split("%"),
+	str = "";
+	for (var i = 1; arr[i]; i++) {
+		str += String.fromCharCode(parseInt(arr[i], 16));
+	}
+	var str=str.toString();
+	var obj=document.getElementById("outdiv");
+	obj.innerHTML=str;
+}
+</script>
+</head>
+<body>
+请放入16进制加密代码进行解密：<br />
+<textarea type="text" onKeyup="javascript:senddata(this);" style="width:800px;height:200px;"></textarea><br />
+请通过双击下方代码进行全选：<br />
+<textarea id="outdiv" type="text" style="width:800px;height:200px;"></textarea>
+</body>
+</html>
