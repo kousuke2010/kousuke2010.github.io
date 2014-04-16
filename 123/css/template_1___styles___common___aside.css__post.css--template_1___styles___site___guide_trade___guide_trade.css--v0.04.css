@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+/* CSS Document */
+aside{width:182px;margin-right:16px;float:left}menu{width:182px;font:14px/40px "microsoft yahei regular","microsoft yahei",SimSun,sans-serif;border-bottom:12px solid #f60;float:left}menu ul{list-style-type:none}menu li{width:180px;height:40px;line-height:40px;border:1px solid #ffe8d9;display:block;float:left;border-top:0;text-align:center;position:relative}menu p{width:182px;height:48px;text-align:center;line-height:48px;font-size:15px;color:#fff;margin:0;display:block;background:#f60;border:0}menu li a,menu li a:link{color:#f60;height:100%;width:100%;display:block}menu .on{width:178px;border:2px solid #fff;background:#e61f1c;border-top:0;border-bottom:0;height:41px}menu .on .sub{width:0;height:0;border:8px solid;border-color:transparent transparent transparent #e61f1c;position:absolute;top:12px;right:-16px;display:block}menu .on a,menu .on a:link{color:#fff}.contact_aside{width:180px;height:136px;display:block;margin-top:5px;float:left}
+#post{width:739px;min-height:800px;padding:15px 20px;border:1px solid #e4e4e4;border-right-width:2px;margin-bottom:50px;float:right}#post .title{font-size:18px;font-weight:normal;font-family:"microsoft yahei regular","microsoft yahei",SimSun,sans-serif;margin-bottom:4px}#post .line{width:100%;height:1px;background:#f60;margin-bottom:30px}#post .line .red{width:98px}#post .content{width:100%;padding-bottom:8px}#post .content img{max-width:100%;margin:8px auto;display:block}#post .content p{text-indent:2em;width:98%;margin:1em auto;font:14px/1.9 tahoma,arial,SimSun,sans-serif}#post .content .orange{color:#f60}#post .content .small{font-size:12px}
+@charset "utf-8";
+*{word-break:break-all;}
+
+#product #post .line{margin-bottom: 50px;}
+#product #post .content{width:94%;font-size:14px;margin:0 auto;}
+#product #post .content p{font-size:14px;}
+#product #post .content li{list-style-type: none;}
+
+/* product 下 chart*/
+.chart_product{width: 680px;border: 1px solid #e4e4e4;overflow: hidden;display: block;margin: 0 auto 30px;font: 14px/1.5 "microsoft yahei regular","microsoft yahei",SimSun,sans-serif;}
+.chart_product li{list-style-type: none;}
+.chart_product .hd .nobr{border-right: none;}
+.chart_product .hd{ height:45px; line-height:45px;padding:0 10px 0 10px;border-bottom:1px solid #ddd;  position:relative;font: 15px/45px "microsoft yahei regular","microsoft yahei",SimSun,sans-serif;}
+.chart_product .hd ul{float:left;position:absolute;top:-1px;height:45px;}
+.chart_product .hd ul li{float:left;padding: 0 17px;cursor:pointer;border-right: 1px solid #ddd;}
+.chart_product .hd ul li.on{height:44px;background:#fff;color: #f60;border-bottom:2px solid #f00;border-top: 1px solid #ddd;}
+.chart_product .bd ul{padding: 14px 24px;zoom:1;overflow: hidden;}
+.chart_product .bd li{width: 640px;overflow: hidden;}
+.chart_product table{width: 630px;margin-bottom: 16px;}
+.chart_product table th{background: #ef7d1f;}
+.chart_product table th,.chart_product table td{text-align: left;padding-left: 24px;line-height: 30px;border: 1px solid #ef7d1f;}
+
+#features #post .line{margin-bottom: 50px;}
+#features #post .content{width: 92%;margin: 0 auto;padding-bottom: 30px;}
+#features #post .content p{text-indent: 0;width: 100%;line-height: 18px;padding-bottom: 10px;border-bottom: 1px dashed #dadada;margin: 0 auto 1em;}
+#features #post .content .noborder{border: 0;}
+
+#post .content {width: 96%;margin: 0 auto;}
+#calculate #post .content p{text-indent: 0;width: 100%;}
+#calculate #post .content span{color: #f03;font-size: 12px;}
+
+#funds #post .content p{text-indent: 0;margin: 30px 0;}
+#funds #post .content h4{margin: 30px 0;}
+
