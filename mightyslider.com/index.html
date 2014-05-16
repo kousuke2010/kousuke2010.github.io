@@ -131,20 +131,17 @@
 							activateOn: 'click'//'mouseover','click','mouseenter',null
 						},
 						commands: {
-							thumbnails:0,
+							thumbnails:1,
 							pages: 1,//1,0
-							buttons: 1//1,0
+							buttons: 0//1,0
 						},
 						cycling: {
-							cycleBy:       'slides', // Enable automatic cycling by 'slides' or 'pages'.
-							pauseTime:     8000, // Delay between cycles in milliseconds.
-							loop:          1,    // Repeat cycling when last slide/page is activated.
-							pauseOnHover:  1,    // Pause cycling when mouse hovers over the FRAME.
-							startPaused:   0     // Whether to start in paused sate.
-						},
-						classes: {
-  isTouchClass: 'isTouch'
-}
+							cycleBy:'slides',// Enable automatic cycling by 'slides' or 'pages'.
+							pauseTime:8000,// Delay between cycles in milliseconds.
+							loop:1,// Repeat cycling when last slide/page is activated.
+							pauseOnHover: 1,// Pause cycling when mouse hovers over the FRAME.
+							startPaused:0// Whether to start in paused sate.
+						}
 					});
 			});
 			/*$(function($) {
