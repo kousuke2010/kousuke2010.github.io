@@ -27,6 +27,7 @@
 	margin: 0;
 	padding: 0;
 	white-space: nowrap;
+	position: relative;
 	z-index: 4;
 }
 .mightyslider_tabsWhite_skin .mSTabs ul li {
@@ -46,6 +47,7 @@
 	margin: 0;
 	margin-right: -1px;
 	z-index: 97;
+	position: relative;
 }
 .mightyslider_tabsWhite_skin .vertical .mSTabs ul li {
 	margin: 0;
