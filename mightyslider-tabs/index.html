@@ -48,68 +48,68 @@
 		var $win = $(window),
 		isTouch = !!('ontouchstart' in window),
 		clickEvent = isTouch ? 'tap': 'click',
-			//presets = ['mightyslider_tabsWhite_skin'],
-			//$skinables = $('#simple),
-			$presetsItems = $('ul.presets-container li');
-			(function() {
-				var $holder = $('#simple'),
-				$tabsbar = $('.mSTabs ul', $holder),
-				$frame = $('.frame', $holder);
-				function calculator(width) {
-					var percent = '25%';
-					if (width <= 480) {
-						percent = '30%';
-					} else if (width <= 768) {
-						percent = '25%';
-					} else {
-						percent = 0;
+		//presets = ['mightyslider_tabsWhite_skin'],
+		//$skinables = $('#simple),
+		$presetsItems = $('ul.presets-container li');
+		(function() {
+			var $holder = $('#simple'),
+			$tabsbar = $('.mSTabs ul', $holder),
+			$frame = $('.frame', $holder);
+			function calculator(width) {
+				var percent = '25%';
+				if (width <= 768) {
+					percent = '30%';
+				} else if (width <= 1024) {
+					percent = '25%';
+				} else {
+					percent = 0;
+				}
+				if (percent !== 0) {
+					$holder.addClass('mSMobile');
+				} else {
+					$holder.removeClass('mSMobile');
+					$('li', $tabsbar).css('width', 'auto');
+				}
+				return percent;
+			};
+			var thumbnailSize = calculator($win.width());
+			$frame.mightySlider({
+				speed: 300,
+				autoResize: 1,
+				navigation: {
+					navigationType: 'basic',
+					slideSize: '100%'
+				},
+				deeplinking: {
+					linkID: 'hr'
+				},
+				thumbnails: {
+					thumbnailsBar: $tabsbar[0],
+					thumbnailNav: thumbnailSize !== 0 ? 'centered': 'basic',
+					thumbnailSize: thumbnailSize,
+					preloadThumbnails: 0,
+					activateOn: clickEvent,
+					thumbnailBuilder: function(index, thumbnail) {
+						return '<li><span class="icon-' + this.slides[index].options.icon + '"></span>' + this.slides[index].options.title + '</li>';
 					}
-					if (percent !== 0) {
-						$holder.addClass('mSMobile');
-					} else {
-						$holder.removeClass('mSMobile');
-						$('li', $tabsbar).css('width', 'auto');
-					}
-					return percent;
-				};
-				var thumbnailSize = calculator($win.width());
-				$frame.mightySlider({
-					speed: 300,
-					autoResize: 1,
-					navigation: {
-						navigationType: 'basic',
-						slideSize: '100%'
-					},
-					deeplinking: {
-						linkID: 'hr'
-					},
+				},
+				dragging: {
+					mouseDragging: 0,
+					touchDragging: 0
+				}
+			});
+			var API = $frame.data().mightySlider;
+			$win.resize(function() {
+				thumbnailSize = calculator($win.width());
+				API.set({
 					thumbnails: {
-						thumbnailsBar: $tabsbar[0],
 						thumbnailNav: thumbnailSize !== 0 ? 'centered': 'basic',
-						thumbnailSize: thumbnailSize,
-						preloadThumbnails: 0,
-						activateOn: clickEvent,
-						thumbnailBuilder: function(index, thumbnail) {
-							return '<li><span class="icon-' + this.slides[index].options.icon + '"></span>' + this.slides[index].options.title + '</li>';
-						}
-					},
-					dragging: {
-						mouseDragging: 0,
-						touchDragging: 0
+						thumbnailSize: thumbnailSize
 					}
 				});
-				var API = $frame.data().mightySlider;
-				$win.resize(function() {
-					thumbnailSize = calculator($win.width());
-					API.set({
-						thumbnails: {
-							thumbnailNav: thumbnailSize !== 0 ? 'centered': 'basic',
-							thumbnailSize: thumbnailSize
-						}
-					});
-				});
-			})();
-		});
+			});
+		})();
+	});
 </script>
 </body>
 </html>
