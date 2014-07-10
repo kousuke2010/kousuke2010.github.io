@@ -1,0 +1,5 @@
+body{font-family: "microsoft yahei";position: relative;}
+input[type="text"]{width: 500px;height: 50px;line-height: 50px;}
+input[type="button"]{padding: 3px 5px;margin: 8px 0;}
+.tips{font-size: 12px;color: red;text-decoration: underline;padding-top: 8px !important;}
+.list{width: 600px;position: fixed;top: 12px;right: 12px;border: 1px dashed #444;padding: 0 0 8px 8px;display: none;}
