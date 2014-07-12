@@ -8,12 +8,12 @@ function listTitle(){
 		$(".list").html("<div class='tips'>该串代码不包含标题。</div>");
 		return false;
 	}else{
-		$(".list").html("<h2>代码中包含标题：（依次排列）</h2>");
+		$(".list").html("<h2>标题：<span>（依次排列,请在右侧框输入完整新标题,不输入则不更改）</span></h2>");
 	}
 	for (var i=0;i < arrtitle.length ; i++){
 		arrtitle[i] = arrtitle[i].replace(/title["][:]["]/g,'');
 		arrtitle[i] = arrtitle[i].replace(/["]/g,'');
-		var list = $(".list").append(i+1+". "+arrtitle[i]+"<br>");
+		var list = $(".list").append(i+". "+"<span class='replaceold"+i+"'>"+arrtitle[i]+"</span><input type='text' cols='80' class='replacenew"+i+"'/><br>");
 		$(".list").val(list);
 	}
 }
@@ -22,8 +22,8 @@ $(".close").click(function(){
 	$(".list").hide();
 });
 // 修正代码
-function fixSource(){
-	var source = $("#source").val();
+function fixList(){
+	var list = $(".list").val();
 	var replaceold = $("#replaceold").val();
 	var replaceoldrude = "/"+replaceold+"/g";
 	//var arrMactches = source.match(eval(replaceoldrude));

@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>潮童汇工具集 - 采集代码初处理</title>
+	<title>潮童汇工具集 - 采集代码处理</title>
 	<link rel="stylesheet" href="style/tool.css">
 </head>
 <body>
-	<h1>潮童汇工具集 - 采集代码初处理</h1>
+	<h1>潮童汇工具集 - 采集代码处理</h1>
 	<p>请将采集工具中导出的代码粘贴到下框：（粘贴后通过点击框外空白处执行）</p>
 	<textarea name="" id="source" cols="80" rows="12" onchange=""></textarea><br>
 	<input type="button" onclick="listTitle();" value="列出标题">
 	<input type="button" onclick="" value="列出图片链接（待开发）">
 	<input type="button" class="close" value="关闭提示">
 	<div class="list"></div>
-	<p>请在下方输入要替换的原文字</p>
-	<input type="text" id="replaceold">
-	<p>请在下方输入要替换的新文字</p>
-	<input type="text" id="replacenew"><br>
-	<input type="button" onclick="fixSource();" value="执行替换操作">
+	<input type="button" onclick="fixList();" value="执行替换操作">
 	<p>以下为处理后代码：</p>
 	<textarea name="" id="fixed" cols="80" rows="12"></textarea>
 	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
