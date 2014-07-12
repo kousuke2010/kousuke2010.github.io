@@ -8,7 +8,7 @@ function listTitle(){
 		$(".list").html("<div class='tips'>该串代码不包含标题。</div>");
 		return false;
 	}else{
-		$(".list").html("<h2>标题：<span>（依次排列,请在右侧框输入完整新标题,不输入则不更改）</span></h2>");
+		$(".list").html("<h2>标题：<b>（依次排列,请在右侧框输入完整新标题,不输入则不更改）</b></h2>");
 	}
 	for (var i=0;i < arrtitle.length ; i++){
 		arrtitle[i] = arrtitle[i].replace(/title["][:]["]/g,'');
@@ -23,16 +23,27 @@ $(".close").click(function(){
 });
 // 修正代码
 function fixList(){
-	var list = $(".list").val();
-	var replaceold = $("#replaceold").val();
-	var replaceoldrude = "/"+replaceold+"/g";
-	//var arrMactches = source.match(eval(replaceoldrude));
-	var replacenew = $("#replacenew").val();
-	//if(eval(replaceoldrude).test(source)){}
-	// for (var i=0;i < arrMactches.length ; i++){
-	// 	var fixed = source.replace(eval(replaceoldrude),replacenew);
-	// 	$("#fixed").val(fixed);
-	// }
-	var fixed = source.replace(eval(replaceoldrude),replacenew);
+	var source = $("#source").val();
+	var spanlength = $(".list span").length;
+	for (var i=0;i < spanlength ; i++){
+		var replaceold = $(".replaceold"+i).html();
+		//var replaceoldrude = "/"+replaceold+"/g";
+		var replacenew = $(".replacenew"+i).val();
+		if(replacenew !== ""){
+			//var fixed = source.replace(eval(replaceoldrude),replacenew);
+			var fixed = source.replace(replaceold,replacenew);
+		}
+	}
 	$("#fixed").val(fixed);
 }
+// 读取文件
+$(function(){
+	$.ajax({
+		type: "POST",//请求方式
+		url: "test.txt",//地址，就是action请求路径
+		data: "text",//数据类型text xml json  script  jsonp
+		success: function(msg){//返回的参数就是 action里面所有的有get和set方法的参数
+			$("#source").val(msg);
+		}
+	});
+});
