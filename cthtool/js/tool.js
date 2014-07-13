@@ -1,3 +1,12 @@
+// 复制到剪切板
+$(function(){
+	$(".copy").zclip({
+		path: "js/ZeroClipboard.swf",
+		copy: function(){
+			return $("#fixed").val();
+		}
+	});
+});//copy: $("#fixed").val()
 // 列出标题
 function listTitle(){
 	$(".list").html("").show();
@@ -40,7 +49,7 @@ function listPic(){
 $(".close").click(function(){
 	$(".list").hide();
 });
-// 修正代码
+// 修正执行代码
 function fixList(){
 	var source = $("#source").val();
 	var spanlength = $(".list span").length;
