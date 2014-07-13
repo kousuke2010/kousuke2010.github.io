@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>潮童汇工具集 - 采集代码处理</title>
+	<link rel="stylesheet" href="style/tool.css">
+</head>
+<body>
+	<h1>潮童汇工具集 - 采集代码处理 - 仅适用于采集插件</h1>
+	<p>请将采集插件中导出的代码粘贴到下框：</p>
+	<textarea name="" id="ini" cols="80" rows="12"></textarea>
+	<p>以下为经过处理后适用于当前使用模板的代码：</p>
+	<textarea name="" id="source" cols="80" rows="12"></textarea><br>
+	<input type="button" onclick="listTitle();" value="标题替换">
+	<input type="button" onclick="listPic();" value="图片替换">
+	<input type="button" class="close" value="关闭替换栏">
+	<input type="button" class="copy" value="复制最终代码"></input>
+	<div class="list"></div>
+	<input type="button" onclick="fixList();" value="执行替换操作">
+	<p>以下为处理后代码：</p>
+	<textarea name="" id="fixed" cols="80" rows="12"></textarea>
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.zclip.min.js"></script>
+	<script src="js/tool.js"></script>
+</body>
+</html>
