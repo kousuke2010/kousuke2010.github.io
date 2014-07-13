@@ -17,6 +17,25 @@ function listTitle(){
 		$(".list").val(list);
 	}
 }
+//列出图片
+function listPic(){
+	$(".list").html("").show();
+	var source = $("#source").val();
+	var picrule =/["]img["][:]["][^"]*["]/g;
+	var arrpic = source.match(picrule);
+	if(arrpic == undefined){
+		$(".list").html("<div class='tips'>该串代码不包含标题。</div>");
+		return false;
+	}else{
+		$(".list").html("<h2>图片：<b>（依次排列,请在右侧框输入完整新标题,不输入则不更改）</b></h2>");
+	}
+	for (var i=0;i < arrpic.length ; i++){
+		arrpic[i] = arrpic[i].replace(/["]img["][:]["]/g,'');
+		arrpic[i] = arrpic[i].replace(/["]/g,'');
+		var list = $(".list").append(i+". <img src='"+arrpic[i]+"' alt='' />"+"<span class='replaceold"+i+"'>"+arrpic[i]+"</span><input type='text' cols='80' class='replacenew"+i+"'/><br>");
+		$(".list").val(list);
+	}
+}
 // 关闭右侧悬浮列表提示栏
 $(".close").click(function(){
 	$(".list").hide();
@@ -27,23 +46,29 @@ function fixList(){
 	var spanlength = $(".list span").length;
 	for (var i=0;i < spanlength ; i++){
 		var replaceold = $(".replaceold"+i).html();
-		//var replaceoldrude = "/"+replaceold+"/g";
+		// 规范正则特殊符号
+		replaceold = replaceold.replace(/[\:]/g,'\\:');
+		replaceold = replaceold.replace(/[\/]/g,'\\/');
+		replaceold = replaceold.replace(/[\_]/g,'\\_');
+		replaceold = replaceold.replace(/[\-]/g,'\\-');
+		replaceold = replaceold.replace(/[\!]/g,'\\!');
+		replaceold = replaceold.replace(/[\.]/g,'\\.');
+		replaceold = replaceold.replace(/[\+]/g,'\\+');
+		var replaceoldrude = "/"+replaceold+"/g";
 		var replacenew = $(".replacenew"+i).val();
 		if(replacenew !== ""){
-			//var fixed = source.replace(eval(replaceoldrude),replacenew);
-			var fixed = source.replace(replaceold,replacenew);
+			var fixed = source.replace(eval(replaceoldrude),replacenew);
+			var source = fixed;
+			// var fixed = source.replace(replaceold,replacenew);
 		}
 	}
-	$("#fixed").val(fixed);
-}
-// 读取文件
-$(function(){
-	$.ajax({
-		type: "POST",//请求方式
-		url: "test.txt",//地址，就是action请求路径
-		data: "text",//数据类型text xml json  script  jsonp
-		success: function(msg){//返回的参数就是 action里面所有的有get和set方法的参数
-			$("#source").val(msg);
+	if(source == ""){
+		$("#fixed").val("请先输入采集工具导出的代码。");
+	}else{
+		if(fixed == undefined){
+			$("#fixed").val(source);
+		}else{
+			$("#fixed").val(fixed);
 		}
-	});
-});
+	}
+}

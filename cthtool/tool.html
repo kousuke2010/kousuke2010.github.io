@@ -4,15 +4,14 @@
 	<meta charset="UTF-8">
 	<title>潮童汇工具集 - 采集代码处理</title>
 	<link rel="stylesheet" href="style/tool.css">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
 </head>
 <body>
 	<h1>潮童汇工具集 - 采集代码处理</h1>
 	<p>请将采集工具中导出的代码粘贴到下框：（粘贴后通过点击框外空白处执行）</p>
-	<form id="formtest" action="" method="post">
-		<textarea name="" id="source" cols="80" rows="12" onchange=""></textarea><br>
-	</form>
-	<input type="button" onclick="listTitle();" value="列出标题">
-	<input type="button" onclick="" value="列出图片链接（待开发）">
+	<textarea name="" id="source" cols="80" rows="12" onchange=""></textarea><br>
+	<input type="button" onclick="listTitle();" value="标题替换">
+	<input type="button" onclick="listPic();" value="图片替换">
 	<input type="button" class="close" value="关闭提示">
 	<div class="list"></div>
 	<input type="button" onclick="fixList();" value="执行替换操作">
