@@ -2,9 +2,11 @@
 $(function(){
 	$(".copy").zclip({
 		path: "js/ZeroClipboard.swf",
-		copy: $("#fixed").val()
+		copy: function(){
+			return $("#fixed").val();
+		}
 	});
-});//copy: function(){return $("#fixed").val();}
+});//copy: $("#fixed").val()
 // 列出标题
 function listTitle(){
 	$(".list").html("").show();
