@@ -1,6 +1,12 @@
 // 复制到剪切板
 $(function(){
-	$(".copy").zclip({
+	$(".copy1").zclip({
+		path: "js/ZeroClipboard.swf",
+		copy: function(){
+			return $("#source").val();
+		}
+	});
+	$(".copy2").zclip({
 		path: "js/ZeroClipboard.swf",
 		copy: function(){
 			return $("#fixed").val();
