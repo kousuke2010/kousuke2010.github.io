@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HummerJs Test_Pinch&Rotate</title>
+	<style>
+		#myElement {
+			width: 100%;
+			display: block;
+			background: silver;
+			height: 90%;
+			position: absolute;
+			text-align: center;
+			font: 30px/300px Helvetica, Arial, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<div id="myElement"></div>
+	<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+	<script>
+		var myElement = document.getElementById('myElement');
+
+		// create a simple instance
+		// by default, it only adds horizontal recognizers
+		var mc = new Hammer(myElement);
+
+		// let the pan gesture support all directions.
+		// this will block the vertical scrolling on a touch-device while on the element
+		mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+		// listen to events...
+		mc.on("panleft panright panup pandown tap press", function(ev) {
+			myElement.textContent = ev.type +" gesture detected.";
+		});
+	</script>
+</body>
+</html>
