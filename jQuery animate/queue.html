@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animate Queue详解</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		#test-container{width: 298px;height: 98px;display: block;float: left;border: 1px solid #ff0;}
+		#test-origin{width: 98px;height: 50px;display: block;float: left;border: 1px solid gray;margin: 8px;position: relative;}
+		#test-goal{width: 98px;height: 50px;display: block;float: right;border: 1px solid gray;margin: 8px;position: relative;}
+		#test-object{width: 44px;height: 24px;font-weight: normal;font-size: 12px;display: block;background: yellow;font-weight: bold;position: absolute;top: 0;right: 0;}
+		.clear{clear: both;}
+	</style>
+</head>
+<body>
+	<div id="test-container">
+		<div id="test-origin">
+			<span>origin</span>
+			<div id="test-object" style="display: block;"><span>object</span></div>
+		</div>
+		<div id="test-goal"><span>goal</span></div>
+	</div>
+	<input value="change" id="test-change" type="button">
+	<div class="clear"></div>
+	<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+	<!--<script src="js/jquery.min.js"></script>-->
+	<script>
+		// $(function(){
+			$('#test-change').toggle(function(){
+				$('#test-object').hide('slow').appendTo($('#test-goal')).show('slow');
+			},function(){
+				$('#test-object').hide('slow').appendTo($('#test-origin')).show('slow');
+			});
+		// });
+	</script>
+</body>
+</html>
