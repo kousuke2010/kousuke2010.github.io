@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animate Queue详解</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		.box{width: 100px;height: 100px;display: block;float: left;margin: 8px 0 0 8px;background: #f60;border: 1px dashed #666;}
+		.clear{clear: both;}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="clear"></div>
+	<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+	<!--<script src="js/jquery.min.js"></script>-->
+	<script>
+		$('.box').slideUp('slow').slideDown('slow').queue(function(next){
+			$('.box').css({"background":"green"});
+			next();
+		}).hide('slow');
+		//将 next(); 注释或者删除将无法执行下一个动画,在这儿注释掉则无法在变色之后进行隐藏；另外，抛弃next参数而保留next()语句，这样的结果是能在现代浏览器(firefox,chrome之类)中运行，但无法在ie6中运行
+	</script>
+</body>
+</html>

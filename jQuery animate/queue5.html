@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animate Queue详解</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		.box{width: 100px;height: 100px;display: block;float: left;margin: 8px 0 0 8px;background: #f60;border: 1px dashed #666;}
+		.clear{clear: both;}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="clear"></div>
+	<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+	<!--<script src="js/jquery.min.js"></script>-->
+	<script>
+		$('.box').slideUp('slow').slideDown('slow');
+		$('.box').queue("custom",function(next){
+			$('.box').css({"background":"green"});
+			next();
+		})
+		.dequeue("custom");//the key to run，取出一个队列然后执行它
+	</script>
+</body>
+</html>
