@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://www.dowebok.com/77.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>jQuery全屏滚动插件fullPage.js_dowebok</title>
+<meta name="keywords" content="fullPage.js,全屏,滚动,jQuery插件,代码,dowebok">
+<meta name="description" content="如今我们经常能见到全屏网站，尤其是国外网站。这些网站用几幅很大的图片或色块做背景，再添加一些简单的内容，显得格外的高端大气上档次。如果你也希望你的网站能设计成全屏的，显得更上档次，你可以试试fullPage.js。">
+<link rel="stylesheet" href="http://www.dowebok.com/wp-content/themes/uehtml/style.css">
+<!--[if lt IE 9]>
+<script src="http://cdn.staticfile.org/html5shiv/3.7/html5shiv.js"></script>
+<![endif]-->
+<!--
+	generated 163 seconds ago
+	generated in 0.176 seconds
+	served from batcache in 0.001 seconds
+	expires in 137 seconds
+-->
+<script src="./jQuery全屏滚动插件fullPage.js_dowebok_files/share.js"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_24.css"><script type="text/javascript" charset="utf-8" src="./jQuery全屏滚动插件fullPage.js_dowebok_files/getnum"></script><link type="text/css" rel="stylesheet" href="./jQuery全屏滚动插件fullPage.js_dowebok_files/embed.default.css"><style type="text/css">#ds-thread { padding: 14px 20px;}
+
+#ds-recent-comments li.ds-comment { border-top: 0 !important; border-bottom: 1px solid #eee;}
+</style></head>
+
+<body>
+<header class="hd">
+	<h1><a href="http://www.dowebok.com/" title="dowebok">dowebok</a></h1>
+	<ul class="nav">
+		<li><a class="cur" href="http://www.dowebok.com/" title="首页">首页</a></li>
+		<li><a href="http://www.dowebok.com/code" title="代码">代码</a></li>
+		<li><a href="http://www.dowebok.com/material" title="素材">素材</a></li>
+		<li><a href="http://www.dowebok.com/template" title="模板">模板</a></li>
+		<li><a href="http://www.dowebok.com/contact" title="联系">联系</a></li>
+	</ul>
+	<div class="search">
+		<form action="">
+			<input class="key" type="text" value="输入关键词"> <input class="go" type="submit" value="搜索">
+		</form>
+		<a class="login" href="">登录</a> <a class="reg" href="">注册</a>
+	</div>
+</header>
+<div class="main">
+	<div id="primary" class="primary">
+		<div class="article">
+												<header>
+				<h1>jQuery全屏滚动插件fullPage.js</h1>
+				<p class="info">
+					<span>分类：<a href="http://www.dowebok.com/code" rel="category tag">代码</a></span> 
+					<span>日期：<time datetime="2015-01-22" pubdate="">2015-01-22</time></span>
+					<span>点击(76,651)</span>
+					<span>评论(<a href="http://www.dowebok.com/77.html#comments" class="ds-thread-count" data-thread-key="77" title="《jQuery全屏滚动插件fullPage.js》上的评论">130</a>)</span>
+				</p>
+			</header>
+			<p><img title="jQuery全屏滚动插件fullPage.js" src="./jQuery全屏滚动插件fullPage.js_dowebok_files/77.png" alt="jQuery全屏滚动插件fullPage.js"></p>
+<p class="vad"><a class="view" title="演示" href="http://www.dowebok.com/demo/2014/77/" target="_blank">演 示</a> <a class="down" title="下载" href="http://www.400gb.com/file/83301805" target="_blank">下 载</a></p>
+<div class="thead"><script type="text/javascript">
+var sogou_ad_id=349394;
+var sogou_ad_height=90;
+var sogou_ad_width=728;
+</script>
+<script type="text/javascript" src="./jQuery全屏滚动插件fullPage.js_dowebok_files/c.js"></script></div>
+<h2>简介</h2>
+<p>如今我们经常能见到全屏网站，尤其是国外网站。这些网站用几幅很大的图片或色块做背景，再添加一些简单的内容，显得格外的高端大气上档次。比如 iPhone 5C 的介绍页面（<a href="http://www.apple.com/cn/iphone-5c/" target="_blank">查看</a>），QQ浏览器的官网站。如果你也希望你的网站能设计成全屏的，显得更上档次，你可以试试 fullPage.js。</p>
+<p>fullPage.js 是一个基于 jQuery 的插件，它能够很方便、很轻松的制作出全屏网站，主要功能有：</p>
+<ul>
+<li>支持鼠标滚动</li>
+<li>支持前进后退和键盘控制</li>
+<li>多个回调函数</li>
+<li>支持手机、平板触摸事件</li>
+<li>支持 CSS3 动画</li>
+<li>支持窗口缩放</li>
+<li>窗口缩放时自动调整</li>
+<li>可设置滚动宽度、背景颜色、滚动速度、循环选项、回调、文本对齐方式等等</li>
+</ul>
+<h2>兼容性</h2>
+<h3>jQuery 兼容</h3>
+<p>兼容 jQuery 1.7+。</p>
+<h3>浏览器兼容</h3>
+<table>
+<thead>
+<tr>
+<th><img title="IE" src="./jQuery全屏滚动插件fullPage.js_dowebok_files/ie.png" alt="IE"></th>
+<th><img title="Chrome" src="./jQuery全屏滚动插件fullPage.js_dowebok_files/chrome.png" alt="Chrome"></th>
+<th><img title="Firefox" src="./jQuery全屏滚动插件fullPage.js_dowebok_files/firefox.png" alt="Firefox"></th>
+<th><img title="Opera" src="./jQuery全屏滚动插件fullPage.js_dowebok_files/opera.png" alt="Opera"></th>
+<th><img title="Safari" src="./jQuery全屏滚动插件fullPage.js_dowebok_files/safari.png" alt="Safari"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IE8+ ✔</td>
+<td>Chrome ✔</td>
+<td>Firefox ✔</td>
+<td>Opera ✔</td>
+<td>Safari ✔</td>
+</tr>
+</tbody>
+</table>
+<h2>使用方法</h2>
+<h3>1、引入文件</h3>
+<pre class="brush:xml">&lt;link rel="stylesheet" href="css/jquery.fullPage.css"&gt;
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- jquery.easings.min.js 用于 easing 参数，也可以使用完整的 jQuery UI 代替，如果不需要设置 easing 参数，可去掉改文件 --&gt;
+&lt;script src="js/jquery.easings.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- 如果 scrollOverflow 设置为 true，则需要引入 jquery.slimscroll.min.js，一般情况下不需要 --&gt;
+&lt;script src="js/jquery.slimscroll.min.js"&gt;&lt;/script&gt;
+
+&lt;script src="js/jquery.fullPage.js"&gt;&lt;/script&gt;</pre>
+<h3>2、HTML</h3>
+<pre>&lt;div id="dowebok"&gt;
+&nbsp;&nbsp;&nbsp; &lt;div class="section"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;第一屏&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp;&nbsp; &lt;div class="section"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;第二屏&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp;&nbsp; &lt;div class="section"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;第三屏&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp;&nbsp; &lt;div class="section"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;第四屏&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>每个 section 代表一屏，默认显示“第一屏”，如果要指定加载页面时显示的“屏幕”，可以在对应的 section 加上 class=”active”，如：</p>
+<pre>&lt;div class="section active"&gt;第三屏&lt;/div&gt;</pre>
+<p>同时，可以在 section 内加入 slide，如：</p>
+<pre class="brush:xml">&lt;div id="dowebok"&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class="section"&gt;第一屏&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class="section"&gt;第二屏&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class="section"&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;div class="slide"&gt;第三屏的第一屏&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;div class="slide"&gt;第三屏的第二屏&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;div class="slide"&gt;第三屏的第三屏&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;div class="slide"&gt;第三屏的第四屏&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class="section"&gt;第四屏&lt;/div&gt;
+&lt;/div&gt;</pre>
+<h3>3、JavaScript</h3>
+<pre class="brush:js">$(function(){
+&nbsp;&nbsp; &nbsp;$('#dowebok').fullpage();
+});</pre>
+<h2>配置</h2>
+<h3>1、选项</h3>
+<table class="table">
+<thead>
+<tr>
+<th>选项</th>
+<th width="50px">类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>verticalCentered</td>
+<td>字符串</td>
+<td>true</td>
+<td>内容是否垂直居中</td>
+</tr>
+<tr>
+<td>resize</td>
+<td>布尔值</td>
+<td>false</td>
+<td>字体是否随着窗口缩放而缩放</td>
+</tr>
+<tr>
+<td>slidesColor</td>
+<td>函数</td>
+<td>无</td>
+<td>设置背景颜色</td>
+</tr>
+<tr>
+<td>anchors</td>
+<td>数组</td>
+<td>无</td>
+<td>定义锚链接</td>
+</tr>
+<tr>
+<td>scrollingSpeed</td>
+<td>整数</td>
+<td>700</td>
+<td>滚动速度，单位为毫秒</td>
+</tr>
+<tr>
+<td>easing</td>
+<td>字符串</td>
+<td>easeInQuart</td>
+<td>滚动动画方式</td>
+</tr>
+<tr>
+<td>menu</td>
+<td>布尔值</td>
+<td>false</td>
+<td>绑定菜单，设定的相关属性与 anchors 的值对应后，菜单可以控制滚动</td>
+</tr>
+<tr>
+<td>navigation</td>
+<td>布尔值</td>
+<td>false</td>
+<td>是否显示项目导航</td>
+</tr>
+<tr>
+<td>navigationPosition</td>
+<td>字符串</td>
+<td>right</td>
+<td>项目导航的位置，可选 left 或 right</td>
+</tr>
+<tr>
+<td>navigationColor</td>
+<td>字符串</td>
+<td>#000</td>
+<td>项目导航的颜色</td>
+</tr>
+<tr>
+<td>navigationTooltips</td>
+<td>数组</td>
+<td>空</td>
+<td>项目导航的 tip</td>
+</tr>
+<tr>
+<td>slidesNavigation</td>
+<td>布尔值</td>
+<td>false</td>
+<td>是否显示左右滑块的项目导航</td>
+</tr>
+<tr>
+<td>slidesNavPosition</td>
+<td>字符串</td>
+<td>bottom</td>
+<td>左右滑块的项目导航的位置，可选 top 或 bottom</td>
+</tr>
+<tr>
+<td>controlArrowColor</td>
+<td>字符串</td>
+<td>#fff</td>
+<td>左右滑块的箭头的背景颜色</td>
+</tr>
+<tr>
+<td>loopBottom</td>
+<td>布尔值</td>
+<td>false</td>
+<td>滚动到最底部后是否滚回顶部</td>
+</tr>
+<tr>
+<td>loopTop</td>
+<td>布尔值</td>
+<td>false</td>
+<td>滚动到最顶部后是否滚底部</td>
+</tr>
+<tr>
+<td>loopHorizontal</td>
+<td>布尔值</td>
+<td>true</td>
+<td>左右滑块是否循环滑动</td>
+</tr>
+<tr>
+<td>autoScrolling</td>
+<td>布尔值</td>
+<td>true</td>
+<td>是否使用插件的滚动方式，如果选择 false，则会出现浏览器自带的滚动条</td>
+</tr>
+<tr>
+<td>scrollOverflow</td>
+<td>布尔值</td>
+<td>false</td>
+<td>内容超过满屏后是否显示滚动条</td>
+</tr>
+<tr>
+<td>css3</td>
+<td>布尔值</td>
+<td>false</td>
+<td>是否使用 CSS3 transforms 滚动</td>
+</tr>
+<tr>
+<td>paddingTop</td>
+<td>字符串</td>
+<td>0</td>
+<td>与顶部的距离</td>
+</tr>
+<tr>
+<td>paddingBottom</td>
+<td>字符串</td>
+<td>0</td>
+<td>与底部距离</td>
+</tr>
+<tr>
+<td>fixedElements</td>
+<td>字符串</td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>normalScrollElements</td>
+<td></td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>keyboardScrolling</td>
+<td>布尔值</td>
+<td>true</td>
+<td>是否使用键盘方向键导航</td>
+</tr>
+<tr>
+<td>touchSensitivity</td>
+<td>整数</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>continuousVertical</td>
+<td>布尔值</td>
+<td>false</td>
+<td>是否循环滚动，与 loopTop 及 loopBottom 不兼容</td>
+</tr>
+<tr>
+<td>animateAnchor</td>
+<td>布尔值</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>normalScrollElementTouchThreshold</td>
+<td>整数</td>
+<td>5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>2、方法</h3>
+<table class="table">
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>moveSectionUp()</td>
+<td>向上滚动</td>
+</tr>
+<tr>
+<td>moveSectionDown()</td>
+<td>向下滚动</td>
+</tr>
+<tr>
+<td>moveTo(section, slide)</td>
+<td>滚动到</td>
+</tr>
+<tr>
+<td>moveSlideRight()</td>
+<td>slide 向右滚动</td>
+</tr>
+<tr>
+<td>moveSlideLeft()</td>
+<td>slide 向左滚动</td>
+</tr>
+<tr>
+<td>setAutoScrolling()</td>
+<td>设置页面滚动方式，设置为 true 时自动滚动</td>
+</tr>
+<tr>
+<td>setAllowScrolling()</td>
+<td>添加或删除鼠标滚轮/触控板控制</td>
+</tr>
+<tr>
+<td>setKeyboardScrolling()</td>
+<td>添加或删除键盘方向键控制</td>
+</tr>
+<tr>
+<td>setScrollingSpeed()</td>
+<td>定义以毫秒为单位的滚动速度</td>
+</tr>
+</tbody>
+</table>
+<h3>3、回调函数</h3>
+<table class="table">
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>afterLoad</td>
+<td>滚动到某一屏后的回调函数，接收 anchorLink 和 index 两个参数，anchorLink 是锚链接的名称，index 是序号，从1开始计算</td>
+</tr>
+<tr>
+<td>onLeave</td>
+<td>滚动前的回调函数，接收 index、nextIndex 和 direction 3个参数：index 是离开的“页面”的序号，从1开始计算；<p></p>
+<p>nextIndex 是滚动到的“页面”的序号，从1开始计算；</p>
+<p>direction 判断往上滚动还是往下滚动，值是 up 或 down。</p></td>
+</tr>
+<tr>
+<td>afterRender</td>
+<td>页面结构生成后的回调函数，或者说页面初始化完成后的回调函数</td>
+</tr>
+<tr>
+<td>afterSlideLoad</td>
+<td>滚动到某一水平滑块后的回调函数，与 afterLoad 类似，接收 anchorLink、index、slideIndex、direction 4个参数</td>
+</tr>
+<tr>
+<td>onSlideLeave</td>
+<td>某一水平滑块滚动前的回调函数，与 onLeave 类似，接收 anchorLink、index、slideIndex、direction 4个参数</td>
+</tr>
+</tbody>
+</table>
+<p class="vad"><a class="view" title="演示" href="http://www.dowebok.com/demo/2014/77/" target="_blank">演 示</a> <a class="down" title="下载" href="http://www.400gb.com/file/83301805" target="_blank">下 载</a></p>
+<div class="thead"><script type="text/javascript">
+var sogou_ad_id=349394;
+var sogou_ad_height=90;
+var sogou_ad_width=728;
+</script>
+<script type="text/javascript" src="./jQuery全屏滚动插件fullPage.js_dowebok_files/c.js"></script></div>
+<h2>相关阅读</h2>
+<ul>
+<li><a title="用fullPage.js制作百度百科史记2013效果" href="http://www.dowebok.com/78.html">用fullPage.js制作百度百科史记2013效果</a></li>
+<li><a title="用fullPage.js制作搜狐快站页面效果" href="http://www.dowebok.com/80.html">用fullPage.js制作搜狐快站页面效果</a></li>
+<li><a title="fullPage.js制作网易邮箱6.0介绍页面" href="http://www.dowebok.com/97.html">fullPage.js制作网易邮箱6.0介绍页面</a></li>
+<li><a title="Scrollify – jQuery全屏滚动插件" href="http://www.dowebok.com/107.html">Scrollify – jQuery全屏滚动插件</a></li>
+</ul>
+<p>fullPage.js GitHub 地址：<a title="fullPage.js GitHub地址" href="https://github.com/alvarotrigo/fullPage.js" target="_blank">https://github.com/alvarotrigo/fullPage.js</a></p>
+			<p class="tag">标签：<a href="http://www.dowebok.com/tag/fullpage-js" rel="tag">fullPage.js</a><a href="http://www.dowebok.com/tag/jquery-plugin" rel="tag">jQuery插件</a><a href="http://www.dowebok.com/tag/fullscreen-onepage-scroll" rel="tag">全屏滚动/单页滚动</a></p>
+			<p class="bdsharebuttonbox bdshare-button-style0-24" data-bd-bind="1426263164890"><span class="s1">分享：</span><a data-cmd="tsina" class="bds_tsina" href="http://www.dowebok.com/77.html#" title="分享到新浪微博"></a><a data-cmd="tqq" class="bds_tqq" href="http://www.dowebok.com/77.html#" title="分享到腾讯微博"></a><a data-cmd="qzone" class="bds_qzone" href="http://www.dowebok.com/77.html#" title="分享到QQ空间"></a><a data-cmd="weixin" class="bds_weixin" href="http://www.dowebok.com/77.html#" title="分享到微信"></a><a data-cmd="renren" class="bds_renren" href="http://www.dowebok.com/77.html#" title="分享到人人网"></a><a data-cmd="kaixin001" class="bds_kaixin001" href="http://www.dowebok.com/77.html#" title="分享到开心网"></a><a data-cmd="more" class="bds_more" href="http://www.dowebok.com/77.html#"></a><a data-cmd="count" class="bds_count" title="累计分享17次">17</a></p>
+					<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+								</div>
+
+		
+			
+		<section class="xg" id="comments">
+			<h2 class="tt1"><span>发表评论</span></h2>
+			<div class="ds-thread" data-thread-key="77" data-title="jQuery全屏滚动插件fullPage.js" data-url="http://www.dowebok.com/77.html" id="ds-thread"><div id="ds-reset"><div class="ds-rounded" id="ds-hot-posts"><div class="ds-header ds-gradient-bg">被顶起来的评论</div><ul><li class="ds-post" data-post-id="1324884023679385793"><div class="ds-post-self" data-post-id="1324884023679385793" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="9218970"><a rel="nofollow author" target="_blank" href="http://weibo.com/1347186167" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=9218970&#39;;" title="茗茗想想"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1" alt="茗茗想想"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/1347186167" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=9218970&#39;;" rel="nofollow" target="_blank" data-user-id="9218970">茗茗想想</a></div><p>最好可以让主屏滑动横竖可选，从屏相应变竖横，滚动可以加在主屏，也可以加在横屏...现在也可以做到，不过略微麻烦了些。。还是要感谢作者的无私奉献，赞。</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-10T09:48:23+08:00" title="2014年12月10日 09:48:23">2014年12月10日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶(7)</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385794"><div class="ds-post-self" data-post-id="1324884023679385794" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="2354016"><a rel="nofollow author" target="_blank" href="http://weibo.com/bjaqiang" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=2354016&#39;;" title="isqiang"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(1)" alt="isqiang"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/bjaqiang" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=2354016&#39;;" rel="nofollow" target="_blank" data-user-id="2354016">isqiang</a></div><p>我还想问一下，为什么我用鼠标滚轮需要滚两下才会上下移动？例子也是有些是滚两下 有些是滚一下？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-10T13:00:49+08:00" title="2014年12月10日 13:00:49">2014年12月10日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶(3)</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385846"><div class="ds-post-self" data-post-id="1324884023679385846" data-thread-id="1324884023679385677" data-root-id="1324884023679385834" data-source="duoshuo"><div class="ds-avatar" data-user-id="10357862"><a rel="nofollow author" target="_blank" href="http://weibo.com/k506" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10357862&#39;;" title="茶小乖"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(2)" alt="茶小乖"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/k506" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10357862&#39;;" rel="nofollow" target="_blank" data-user-id="10357862">茶小乖</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385846" data-parent-id="1324884023679385844">回复 dowebok: </a>能做个小米4那种滚动效果么？fullpage滚动不到class以外的地方。</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-06T14:52:22+08:00" title="2015年1月6日 14:52:22">1月6日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶(2)</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li></ul></div><a name="respond"></a><div class="ds-toolbar"><div class="ds-account-control"><span class="ds-icon ds-icon-settings"></span> <span>帐号管理</span><ul><li><a class="ds-bind-more" href="javascript:void(0);" style="border-top: none">绑定更多</a></li><li><a target="_blank" href="http://duoshuo.com/settings/">设置</a></li><li><a rel="nofollow" href="http://dowebok.duoshuo.com/logout/" style="border-bottom: none">登出</a></li></ul></div><div class="ds-visitor"><a class="ds-visitor-name" href="http://www.zhugexiaojue.com/" target="_blank">诸葛小觉</a><a class="ds-unread-comments-count" href="javascript:void(0);" title="新回复"></a></div></div><div class="ds-replybox"><a class="ds-avatar" href="http://duoshuo.com/settings/avatar/" target="_blank" title="设置头像"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50" alt="诸葛小觉"></a><form method="post"><input type="hidden" name="thread_id" value="1324884023679385677">
+<input type="hidden" name="parent_id" value="">
+<input type="hidden" name="nonce" value="54e728937ee37"><div class="ds-textarea-wrapper ds-rounded-top"><textarea name="message" title="Ctrl+Enter快捷提交" placeholder="说点什么吧…"></textarea><pre class="ds-hidden-text"></pre></div><div class="ds-post-toolbar"><div class="ds-post-options ds-gradient-bg"><span class="ds-sync"><input id="ds-sync-checkbox" type="checkbox" name="repost" value=""> <label for="ds-sync-checkbox">分享到:</label><a href="javascript:void(0)" class="ds-service-icon-grey ds-weibo" data-service="weibo" title="新浪微博"></a><a href="javascript:void(0)" class="ds-service-icon-grey ds-qqt" data-service="qqt" title="腾讯微博"></a><a href="javascript:void(0)" class="ds-service-icon-grey ds-qzone" data-service="qzone" title="QQ空间"></a><a href="javascript:void(0)" class="ds-service-icon-grey ds-renren" data-service="renren" title="人人网"></a><a href="javascript:void(0)" class="ds-service-icon-grey ds-kaixin" data-service="kaixin" title="开心网"></a><a href="javascript:void(0)" class="ds-service-icon-grey ds-douban" data-service="douban" title="豆瓣网"></a><a href="javascript:void(0)" class="ds-service-icon-grey ds-netease" data-service="netease" title="网易微博"></a></span></div><button class="ds-post-button" type="submit">发布</button><div class="ds-toolbar-buttons"><a class="ds-toolbar-button ds-add-emote" title="插入表情"></a></div></div></form></div><div class="ds-comments-info"><div class="ds-sort"><a class="ds-order-desc ds-current">最新</a><a class="ds-order-asc">最早</a><a class="ds-order-hot">最热</a></div><ul class="ds-comments-tabs"><li class="ds-tab"><a class="ds-comments-tab-duoshuo ds-current" href="javascript:void(0);"><span class="ds-highlight">130</span>评论</a></li>  </ul></div><ul class="ds-comments"><li class="ds-post" data-post-id="1324884023679385933"><div class="ds-post-self" data-post-id="1324884023679385933" data-thread-id="1324884023679385677" data-root-id="1324884023679385811" data-source="duoshuo"><div class="ds-avatar" data-user-id="11074747"><a rel="nofollow author" target="_blank" href="http://weibo.com/mrjaychui" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=11074747&#39;;" title="MRJayChui"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(3)" alt="MRJayChui"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/mrjaychui" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=11074747&#39;;" rel="nofollow" target="_blank" data-user-id="11074747">MRJayChui</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385933" data-parent-id="1324884023679385930">回复 color丶苏色: </a>同问，迫切想知道，怎样改这个水平居中问题。</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-03-10T16:07:24+08:00" title="2015年3月10日 16:07:24">3月10日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385930"><div class="ds-post-self" data-post-id="1324884023679385930" data-thread-id="1324884023679385677" data-root-id="1324884023679385811" data-source="duoshuo"><div class="ds-avatar" data-user-id="9180668"><a rel="nofollow author" target="_blank" href="http://t.qq.com/a113053788" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=9180668&#39;;" title="color丶苏色"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(1)" alt="color丶苏色"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/a113053788" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=9180668&#39;;" rel="nofollow" target="_blank" data-user-id="9180668">color丶苏色</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385930" data-parent-id="1324884023679385813">回复 dowebok: </a>恩恩，是的。但是，他是在 body中高度自动上下居中 <img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/cj_org.gif" alt="[吃惊]" title="[吃惊]" class="ds-smiley">  请问这个高度可以手动调整吗</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-03-02T17:38:02+08:00" title="2015年3月2日 17:38:02">3月2日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385924"><div class="ds-post-self" data-post-id="1324884023679385924" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="807657"><a rel="nofollow author" target="_blank" href="http://weibo.com/2568875180" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=807657&#39;;" title="疯狂weber"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(4)" alt="疯狂weber"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/2568875180" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=807657&#39;;" rel="nofollow" target="_blank" data-user-id="807657">疯狂weber</a></div><p> <img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/gza_org.gif" alt="[鼓掌]" title="[鼓掌]" class="ds-smiley"> 好用！</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-02-28T15:27:31+08:00" title="2015年2月28日 15:27:31">2月28日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385922"><div class="ds-post-self" data-post-id="1324884023679385922" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10840214"><a rel="nofollow author" target="_blank" href="http://t.qq.com/sd19931109" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10840214&#39;;" title="咚崽"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117639.jpg" alt="咚崽"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/sd19931109" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10840214&#39;;" rel="nofollow" target="_blank" data-user-id="10840214">咚崽</a></div><p>赞lz辛苦    只是我想问下左右图片滚动  第一张左移怎么是跳第二张再到第三张的   怎么改写能实现循环滚动</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-02-25T11:08:37+08:00" title="2015年2月25日 11:08:37">2月25日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385901"><div class="ds-post-self" data-post-id="1324884023679385901" data-thread-id="1324884023679385677" data-root-id="1324884023679385897" data-source="duoshuo"><div class="ds-avatar" data-user-id="10710628"><a rel="nofollow author" target="_blank" href="http://weibo.com/asethan" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10710628&#39;;" title="Ethan最近比较烦"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(5)" alt="Ethan最近比较烦"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/asethan" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10710628&#39;;" rel="nofollow" target="_blank" data-user-id="10710628">Ethan最近比较烦</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385901" data-parent-id="1324884023679385897">回复 琪辉: </a>LZ写的不错，但不全建议去GITHUB上看下，你应该设置 sectionsColor</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-02-02T17:36:25+08:00" title="2015年2月2日 17:36:25">2月2日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385897"><div class="ds-post-self" data-post-id="1324884023679385897" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10704359"><a rel="nofollow author" target="_blank" href="http://t.qq.com/qihui0821" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10704359&#39;;" title="琪辉"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(2)" alt="琪辉"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/qihui0821" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10704359&#39;;" rel="nofollow" target="_blank" data-user-id="10704359">琪辉</a></div><p>非常棒的插件！我按使用方法去设置了一下，但是在预览效果的时候只看见 第一屏、第二屏、第三屏和第四屏，并没有背景颜色显示出来，请问这是为什么呀？是不是要我自己建立一个CSS样式文件来设置每个屏的颜色或者内容？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-02-02T00:01:41+08:00" title="2015年2月2日 00:01:41">2月2日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385896"><div class="ds-post-self" data-post-id="1324884023679385896" data-thread-id="1324884023679385677" data-root-id="1324884023679385888" data-source="duoshuo"><div class="ds-avatar" data-user-id="10605276"><a rel="nofollow author" target="_blank" href="http://t.qq.com/phpshuyuan" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10605276&#39;;" title="毅拉罐"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(3)" alt="毅拉罐"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/phpshuyuan" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10605276&#39;;" rel="nofollow" target="_blank" data-user-id="10605276">毅拉罐</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385896" data-parent-id="1324884023679385895">回复 北极熊: </a>兄弟，找到答案别忘告诉我一声啊</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-29T18:08:32+08:00" title="2015年1月29日 18:08:32">1月29日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385895"><div class="ds-post-self" data-post-id="1324884023679385895" data-thread-id="1324884023679385677" data-root-id="1324884023679385888" data-source="duoshuo"><div class="ds-avatar" data-user-id="9973911"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/100" alt="北极熊"></div><div class="ds-comment-body"><div class="ds-comment-header"><span class="ds-user-name" data-user-id="9973911" data-qqt-account="">北极熊</span></div><p><a class="ds-comment-context" data-post-id="1324884023679385895" data-parent-id="1324884023679385888">回复 毅拉罐: </a>我也想问这个问题</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-29T16:26:26+08:00" title="2015年1月29日 16:26:26">1月29日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385894"><div class="ds-post-self" data-post-id="1324884023679385894" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="841954"><a rel="nofollow author" target="_blank" href="http://t.qq.com/LeLeBolg" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=841954&#39;;" title="易烁"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(4)" alt="易烁"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/LeLeBolg" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=841954&#39;;" rel="nofollow" target="_blank" data-user-id="841954">易烁</a></div><p>scrollOverflow这个参数设置为true会报错是怎么回事？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-28T17:43:33+08:00" title="2015年1月28日 17:43:33">1月28日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385893"><div class="ds-post-self" data-post-id="1324884023679385893" data-thread-id="1324884023679385677" data-root-id="1324884023679385892" data-source="duoshuo"><div class="ds-avatar" data-user-id="1952278"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" title="dowebok"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117640.jpg" alt="dowebok"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" rel="nofollow" target="_blank" data-user-id="1952278">dowebok</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385893" data-parent-id="1324884023679385892">回复 wgqth: </a>$('.btn').click({<br>
+$.fn.fullpage.moveTo('page2', 2);<br>
+})</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-28T11:28:55+08:00" title="2015年1月28日 11:28:55">1月28日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385892"><div class="ds-post-self" data-post-id="1324884023679385892" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="617506"><a rel="nofollow author" target="_blank" href="http://weibo.com/wgqth" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=617506&#39;;" title="wgqth"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(6)" alt="wgqth"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/wgqth" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=617506&#39;;" rel="nofollow" target="_blank" data-user-id="617506">wgqth</a></div><p>请问：moveTo(section, slide) 这个参数怎么使用，我想跳转到slide指定页面  通过A标签的形式</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-27T22:17:55+08:00" title="2015年1月27日 22:17:55">1月27日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385888"><div class="ds-post-self" data-post-id="1324884023679385888" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10605276"><a rel="nofollow author" target="_blank" href="http://t.qq.com/phpshuyuan" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10605276&#39;;" title="毅拉罐"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(3)" alt="毅拉罐"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/phpshuyuan" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10605276&#39;;" rel="nofollow" target="_blank" data-user-id="10605276">毅拉罐</a></div><p>我看到有一个网站最后的底部不是滚动整屏的，这是怎么实现的？也就是网页底部没有那么大，所以就滚动了那么大，比如这个站<br>
+http://picooc.com/</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-26T15:09:58+08:00" title="2015年1月26日 15:09:58">1月26日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385885"><div class="ds-post-self" data-post-id="1324884023679385885" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="5712087"><a rel="nofollow author" target="_blank" href="http://weibo.com/toyopo" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=5712087&#39;;" title="Toyopo"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(7)" alt="Toyopo"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/toyopo" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=5712087&#39;;" rel="nofollow" target="_blank" data-user-id="5712087">Toyopo</a></div><p>你好，section中带有slide的情况，向下滑动能不能先逐个浏览slide，再浏览下一个section，而不是直接跳过</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-23T21:57:05+08:00" title="2015年1月23日 21:57:05">1月23日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385881"><div class="ds-post-self" data-post-id="1324884023679385881" data-thread-id="1324884023679385677" data-root-id="1324884023679385880" data-source="duoshuo"><div class="ds-avatar" data-user-id="1952278"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" title="dowebok"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117640.jpg" alt="dowebok"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" rel="nofollow" target="_blank" data-user-id="1952278">dowebok</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385881" data-parent-id="1324884023679385880">回复 你好忧愁: </a>添加 viewport 试试。</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-21T09:16:53+08:00" title="2015年1月21日 09:16:53">1月21日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385880"><div class="ds-post-self" data-post-id="1324884023679385880" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="1802374"><a rel="nofollow author" target="_blank" href="http://t.qq.com/sqaiyan" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1802374&#39;;" title="你好忧愁"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(5)" alt="你好忧愁"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/sqaiyan" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1802374&#39;;" rel="nofollow" target="_blank" data-user-id="1802374">你好忧愁</a></div><p>手机上浏览当页面有输入框时候弹出输入法，关闭后就错位了也没法滚动了，</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-20T22:04:03+08:00" title="2015年1月20日 22:04:03">1月20日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385878"><div class="ds-post-self" data-post-id="1324884023679385878" data-thread-id="1324884023679385677" data-root-id="1324884023679385834" data-source="duoshuo"><div class="ds-avatar" data-user-id="10513701"><a rel="nofollow author" target="_blank" href="http://t.qq.com/jiakai92" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10513701&#39;;" title="许佳凯"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(6)" alt="许佳凯"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/jiakai92" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10513701&#39;;" rel="nofollow" target="_blank" data-user-id="10513701">许佳凯</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385878" data-parent-id="1324884023679385860">回复 Anthony: </a>是不是老是居中？<br>
+<br>
+verticalCentered : false               //取消内容是否垂直居中</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-19T18:02:15+08:00" title="2015年1月19日 18:02:15">1月19日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385865"><div class="ds-post-self" data-post-id="1324884023679385865" data-thread-id="1324884023679385677" data-root-id="1324884023679385861" data-source="duoshuo"><div class="ds-avatar" data-user-id="10465987"><a rel="nofollow author" target="_blank" href="http://t.qq.com/namu1216" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10465987&#39;;" title="Anthony"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(7)" alt="Anthony"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/namu1216" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10465987&#39;;" rel="nofollow" target="_blank" data-user-id="10465987">Anthony</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385865" data-parent-id="1324884023679385863">回复 dowebok: </a>谢谢，已解决</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-17T10:25:41+08:00" title="2015年1月17日 10:25:41">1月17日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385863"><div class="ds-post-self" data-post-id="1324884023679385863" data-thread-id="1324884023679385677" data-root-id="1324884023679385861" data-source="duoshuo"><div class="ds-avatar" data-user-id="1952278"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" title="dowebok"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117640.jpg" alt="dowebok"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" rel="nofollow" target="_blank" data-user-id="1952278">dowebok</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385863" data-parent-id="1324884023679385861">回复 Anthony: </a>meta</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-16T23:08:28+08:00" title="2015年1月16日 23:08:28">1月16日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385861"><div class="ds-post-self" data-post-id="1324884023679385861" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10465987"><a rel="nofollow author" target="_blank" href="http://t.qq.com/namu1216" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10465987&#39;;" title="Anthony"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(7)" alt="Anthony"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/namu1216" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10465987&#39;;" rel="nofollow" target="_blank" data-user-id="10465987">Anthony</a></div><p>手机浏览器打开，双击界面会有放大效果，怎么禁止掉？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-16T14:42:47+08:00" title="2015年1月16日 14:42:47">1月16日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385860"><div class="ds-post-self" data-post-id="1324884023679385860" data-thread-id="1324884023679385677" data-root-id="1324884023679385834" data-source="duoshuo"><div class="ds-avatar" data-user-id="10465987"><a rel="nofollow author" target="_blank" href="http://t.qq.com/namu1216" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10465987&#39;;" title="Anthony"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(7)" alt="Anthony"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/namu1216" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10465987&#39;;" rel="nofollow" target="_blank" data-user-id="10465987">Anthony</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385860" data-parent-id="1324884023679385844">回复 dowebok: </a>&lt;div class="section"&gt;标签内的内容，不知怎么使其布局在顶部，我就想每一屏设置个title在头部，怎么调都达不到想要的效果。。请高手指点一下</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-16T11:25:06+08:00" title="2015年1月16日 11:25:06">1月16日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385859"><div class="ds-post-self" data-post-id="1324884023679385859" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10465987"><a rel="nofollow author" target="_blank" href="http://t.qq.com/namu1216" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10465987&#39;;" title="Anthony"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(7)" alt="Anthony"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/namu1216" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10465987&#39;;" rel="nofollow" target="_blank" data-user-id="10465987">Anthony</a></div><p>感谢作者的无私奉献！！！</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-15T13:55:15+08:00" title="2015年1月15日 13:55:15">1月15日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385857"><div class="ds-post-self" data-post-id="1324884023679385857" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="8151282"><a rel="nofollow author" target="_blank" href="http://t.qq.com/c287001350" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=8151282&#39;;" title="cheney"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(8)" alt="cheney"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/c287001350" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=8151282&#39;;" rel="nofollow" target="_blank" data-user-id="8151282">cheney</a></div><p>continuousVertical: true怎么没循环滚动</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-15T10:27:52+08:00" title="2015年1月15日 10:27:52">1月15日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385856"><div class="ds-post-self" data-post-id="1324884023679385856" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10345672"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/100(1)" alt="totovlen"></div><div class="ds-comment-body"><div class="ds-comment-header"><span class="ds-user-name" data-user-id="10345672" data-qqt-account="">totovlen</span></div><p>@dowebok 大神  能不能做个有半页，或者有头部和底部的效果，就是显示一部分 之前那一页也显示一部分,像这个网站的最后一页的效果 http://1.baidu.com/</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-13T19:40:45+08:00" title="2015年1月13日 19:40:45">1月13日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385855"><div class="ds-post-self" data-post-id="1324884023679385855" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="8624112"><a rel="nofollow author" target="_blank" href="http://t.qq.com/leishaodong_jack" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=8624112&#39;;" title="Michael"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(9)" alt="Michael"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/leishaodong_jack" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=8624112&#39;;" rel="nofollow" target="_blank" data-user-id="8624112">Michael</a></div><p>窗口缩放时自动调整怎么取消了啊？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-13T10:17:03+08:00" title="2015年1月13日 10:17:03">1月13日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385849"><div class="ds-post-self" data-post-id="1324884023679385849" data-thread-id="1324884023679385677" data-root-id="1324884023679385838" data-source="duoshuo"><div class="ds-avatar" data-user-id="10345672"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/100(1)" alt="totovlen"></div><div class="ds-comment-body"><div class="ds-comment-header"><span class="ds-user-name" data-user-id="10345672" data-qqt-account="">totovlen</span></div><p><a class="ds-comment-context" data-post-id="1324884023679385849" data-parent-id="1324884023679385841">回复 dowebok: </a>换了个最新版本的就好了 ，，谢谢</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-08T09:04:20+08:00" title="2015年1月8日 09:04:20">1月8日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385847"><div class="ds-post-self" data-post-id="1324884023679385847" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10368463"><a rel="nofollow author" target="_blank" href="http://weibo.com/izqiang" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10368463&#39;;" title="钟小强同学"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(8)" alt="钟小强同学"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/izqiang" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10368463&#39;;" rel="nofollow" target="_blank" data-user-id="10368463">钟小强同学</a></div><p>滚动的时候要滚两下，有点不自然，这样的体验不好，希望楼主改进下</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-07T11:16:21+08:00" title="2015年1月7日 11:16:21">1月7日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385846"><div class="ds-post-self" data-post-id="1324884023679385846" data-thread-id="1324884023679385677" data-root-id="1324884023679385834" data-source="duoshuo"><div class="ds-avatar" data-user-id="10357862"><a rel="nofollow author" target="_blank" href="http://weibo.com/k506" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10357862&#39;;" title="茶小乖"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(2)" alt="茶小乖"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/k506" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10357862&#39;;" rel="nofollow" target="_blank" data-user-id="10357862">茶小乖</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385846" data-parent-id="1324884023679385844">回复 dowebok: </a>能做个小米4那种滚动效果么？fullpage滚动不到class以外的地方。</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-06T14:52:22+08:00" title="2015年1月6日 14:52:22">1月6日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶(2)</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385844"><div class="ds-post-self" data-post-id="1324884023679385844" data-thread-id="1324884023679385677" data-root-id="1324884023679385834" data-source="duoshuo"><div class="ds-avatar" data-user-id="1952278"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" title="dowebok"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117640.jpg" alt="dowebok"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" rel="nofollow" target="_blank" data-user-id="1952278">dowebok</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385844" data-parent-id="1324884023679385834">回复 此生不换: </a>注意看文档，scrollingSpeed 是设置过度时间的，你设置成了 0，当然就没有动画效果了。</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-06T10:02:12+08:00" title="2015年1月6日 10:02:12">1月6日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385842"><div class="ds-post-self" data-post-id="1324884023679385842" data-thread-id="1324884023679385677" data-root-id="1324884023679385840" data-source="duoshuo"><div class="ds-avatar" data-user-id="1952278"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" title="dowebok"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117640.jpg" alt="dowebok"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" rel="nofollow" target="_blank" data-user-id="1952278">dowebok</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385842" data-parent-id="1324884023679385840">回复 胡鸿飞: </a>我也不知道怎么翻译 -_#</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-06T09:59:59+08:00" title="2015年1月6日 09:59:59">1月6日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385841"><div class="ds-post-self" data-post-id="1324884023679385841" data-thread-id="1324884023679385677" data-root-id="1324884023679385838" data-source="duoshuo"><div class="ds-avatar" data-user-id="1952278"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" title="dowebok"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117640.jpg" alt="dowebok"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" rel="nofollow" target="_blank" data-user-id="1952278">dowebok</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385841" data-parent-id="1324884023679385838">回复 totovlen: </a>在需要的地方直接调用 $.fn.fullpage.moveSectionUp();</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-06T09:57:56+08:00" title="2015年1月6日 09:57:56">1月6日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385840"><div class="ds-post-self" data-post-id="1324884023679385840" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10351198"><a rel="nofollow author" target="_blank" href="http://t.qq.com/hudianlao48" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10351198&#39;;" title="胡鸿飞"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(10)" alt="胡鸿飞"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/hudianlao48" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10351198&#39;;" rel="nofollow" target="_blank" data-user-id="10351198">胡鸿飞</a></div><p>为什么……有些参数没有说明？fixedElements是干嘛用的呢？touchSensitivity又是干嘛用的呢？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-05T20:38:09+08:00" title="2015年1月5日 20:38:09">1月5日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385839"><div class="ds-post-self" data-post-id="1324884023679385839" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="8605260"><a rel="nofollow author" target="_blank" href="http://accn.me/" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=8605260&#39;;" title="阿昭"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(9)" alt="阿昭"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://accn.me/" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=8605260&#39;;" rel="nofollow" target="_blank" data-user-id="8605260">阿昭</a></div><p>找个很久 终于找到了 谢谢</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-05T18:02:00+08:00" title="2015年1月5日 18:02:00">1月5日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385838"><div class="ds-post-self" data-post-id="1324884023679385838" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10345672"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/100(1)" alt="totovlen"></div><div class="ds-comment-body"><div class="ds-comment-header"><span class="ds-user-name" data-user-id="10345672" data-qqt-account="">totovlen</span></div><p>楼主，为什么我用moveSectionUp这个方法的时候报错。提示没有找到这个方法， $("#fullpage").fullpage.moveSectionUp();请问是这样用吗？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-05T11:01:07+08:00" title="2015年1月5日 11:01:07">1月5日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385834"><div class="ds-post-self" data-post-id="1324884023679385834" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10344660"><a rel="nofollow author" target="_blank" href="http://t.qq.com/alchemist56" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10344660&#39;;" title="此生不换"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(11)" alt="此生不换"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/alchemist56" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10344660&#39;;" rel="nofollow" target="_blank" data-user-id="10344660">此生不换</a></div><p>大神你好，我添加了scrollingSpeed: 0;这个属性后，滑动效果就没了，该如何解决？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-05T09:31:09+08:00" title="2015年1月5日 09:31:09">1月5日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385833"><div class="ds-post-self" data-post-id="1324884023679385833" data-thread-id="1324884023679385677" data-root-id="1324884023679385832" data-source="duoshuo"><div class="ds-avatar" data-user-id="1952278"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" title="dowebok"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117640.jpg" alt="dowebok"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" rel="nofollow" target="_blank" data-user-id="1952278">dowebok</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385833" data-parent-id="1324884023679385832">回复 科e互联: </a>因为它会使用 afterRender 方法重新构建你的 html，你可以先隐藏页面内容，加上一个 loading 效果，待 afterRender 方法执行后再显示，类似于 http://www.dowebok.com/demo/120/ 或 http://www.dowebok.com/demo/142/</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-05T08:36:58+08:00" title="2015年1月5日 08:36:58">1月5日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385832"><div class="ds-post-self" data-post-id="1324884023679385832" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="4010713"><a rel="nofollow author" target="_blank" href="http://weibo.com/internetke" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=4010713&#39;;" title="科e互联"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(10)" alt="科e互联"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/internetke" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=4010713&#39;;" rel="nofollow" target="_blank" data-user-id="4010713">科e互联</a></div><p>问下老大，为什么刷新页面，其他页面图片元素先出来闪屏一下，然后才是首页内容显示呢？忘回答哈？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-04T18:11:42+08:00" title="2015年1月4日 18:11:42">1月4日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385830"><div class="ds-post-self" data-post-id="1324884023679385830" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="1922381"><a rel="nofollow author" target="_blank" href="http://t.qq.com/Eternal_____2014" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1922381&#39;;" title="                Onion。"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(12)" alt="                Onion。"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/Eternal_____2014" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1922381&#39;;" rel="nofollow" target="_blank" data-user-id="1922381">                Onion。</a></div><p>moveSlideRight()向右自动滚动为何无效？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2015-01-01T11:12:31+08:00" title="2015年1月1日 11:12:31">1月1日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385822"><div class="ds-post-self" data-post-id="1324884023679385822" data-thread-id="1324884023679385677" data-root-id="1324884023679385815" data-source="duoshuo"><div class="ds-avatar" data-user-id="10191847"><a rel="nofollow author" target="_blank" href="http://t.qq.com/FYM5258456" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10191847&#39;;" title="日月星"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117639.jpg" alt="日月星"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/FYM5258456" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10191847&#39;;" rel="nofollow" target="_blank" data-user-id="10191847">日月星</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385822" data-parent-id="1324884023679385816">回复 dowebok: </a>谢谢，已经搞定</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-24T06:52:41+08:00" title="2014年12月24日 06:52:41">2014年12月24日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385821"><div class="ds-post-self" data-post-id="1324884023679385821" data-thread-id="1324884023679385677" data-root-id="1324884023679385817" data-source="duoshuo"><div class="ds-avatar" data-user-id="7367393"><a rel="nofollow author" target="_blank" href="http://weibo.com/2377854475" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=7367393&#39;;" title="TomorrowSilence"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(11)" alt="TomorrowSilence"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/2377854475" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=7367393&#39;;" rel="nofollow" target="_blank" data-user-id="7367393">TomorrowSilence</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385821" data-parent-id="1324884023679385817">回复 TomorrowSilence: </a>我还想问一下，为什么我用鼠标滚轮需要滚两下才会上下移动？例子也是有些是滚两下 有些是滚一下？这个问题是，添加这个参数：scrollingSpeed: 0;就可以了；哈哈我刚发现的；这个是有默认值的</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-23T11:49:04+08:00" title="2014年12月23日 11:49:04">2014年12月23日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385820"><div class="ds-post-self" data-post-id="1324884023679385820" data-thread-id="1324884023679385677" data-root-id="1324884023679385777" data-source="duoshuo"><div class="ds-avatar" data-user-id="7367393"><a rel="nofollow author" target="_blank" href="http://weibo.com/2377854475" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=7367393&#39;;" title="TomorrowSilence"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(11)" alt="TomorrowSilence"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/2377854475" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=7367393&#39;;" rel="nofollow" target="_blank" data-user-id="7367393">TomorrowSilence</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385820" data-parent-id="1324884023679385781">回复 dowebok: </a>我也想问一下，大神</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-23T11:07:49+08:00" title="2014年12月23日 11:07:49">2014年12月23日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385817"><div class="ds-post-self" data-post-id="1324884023679385817" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="7367393"><a rel="nofollow author" target="_blank" href="http://weibo.com/2377854475" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=7367393&#39;;" title="TomorrowSilence"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(11)" alt="TomorrowSilence"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/2377854475" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=7367393&#39;;" rel="nofollow" target="_blank" data-user-id="7367393">TomorrowSilence</a></div><p>我还想问一下，为什么我用鼠标滚轮需要滚两下才会上下移动？例子也是有些是滚两下 有些是滚一下？按两下键盘的方向键才能切换？<br>
+有大神没在线等....</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-23T10:58:06+08:00" title="2014年12月23日 10:58:06">2014年12月23日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385816"><div class="ds-post-self" data-post-id="1324884023679385816" data-thread-id="1324884023679385677" data-root-id="1324884023679385815" data-source="duoshuo"><div class="ds-avatar" data-user-id="1952278"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" title="dowebok"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117640.jpg" alt="dowebok"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" rel="nofollow" target="_blank" data-user-id="1952278">dowebok</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385816" data-parent-id="1324884023679385815">回复 日月星: </a>设置 css3:true</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-22T11:22:43+08:00" title="2014年12月22日 11:22:43">2014年12月22日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385815"><div class="ds-post-self" data-post-id="1324884023679385815" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10191847"><a rel="nofollow author" target="_blank" href="http://t.qq.com/FYM5258456" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10191847&#39;;" title="日月星"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117639.jpg" alt="日月星"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/FYM5258456" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10191847&#39;;" rel="nofollow" target="_blank" data-user-id="10191847">日月星</a></div><p>在手机上页面切换回很卡，请问有什么解决方案吗？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-21T16:42:01+08:00" title="2014年12月21日 16:42:01">2014年12月21日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385813"><div class="ds-post-self" data-post-id="1324884023679385813" data-thread-id="1324884023679385677" data-root-id="1324884023679385811" data-source="duoshuo"><div class="ds-avatar" data-user-id="1952278"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" title="dowebok"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117640.jpg" alt="dowebok"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" rel="nofollow" target="_blank" data-user-id="1952278">dowebok</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385813" data-parent-id="1324884023679385811">回复 color丶苏色: </a>这些不都是自动调整好了吗？</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-19T21:48:55+08:00" title="2014年12月19日 21:48:55">2014年12月19日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385812"><div class="ds-post-self" data-post-id="1324884023679385812" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="9180668"><a rel="nofollow author" target="_blank" href="http://t.qq.com/a113053788" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=9180668&#39;;" title="color丶苏色"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(1)" alt="color丶苏色"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/a113053788" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=9180668&#39;;" rel="nofollow" target="_blank" data-user-id="9180668">color丶苏色</a></div><p>fp-tableCell 这个样式里面的 display: table-cell; 和我自己写的样式冲突了 ，请问把这个样式去了 这个插件里面的效果会有什么不良影响哦2</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-19T10:41:47+08:00" title="2014年12月19日 10:41:47">2014年12月19日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385811"><div class="ds-post-self" data-post-id="1324884023679385811" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="9180668"><a rel="nofollow author" target="_blank" href="http://t.qq.com/a113053788" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=9180668&#39;;" title="color丶苏色"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(1)" alt="color丶苏色"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/a113053788" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=9180668&#39;;" rel="nofollow" target="_blank" data-user-id="9180668">color丶苏色</a></div><p>请问项目导航 高度如何调整哇~ 可以改成根据内容的高度自动上下居中吗</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-19T10:38:39+08:00" title="2014年12月19日 10:38:39">2014年12月19日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385808"><div class="ds-post-self" data-post-id="1324884023679385808" data-thread-id="1324884023679385677" data-root-id="1324884023679385805" data-source="duoshuo"><div class="ds-avatar" data-user-id="10151299"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/100(2)" alt="zhongyz"></div><div class="ds-comment-body"><div class="ds-comment-header"><span class="ds-user-name" data-user-id="10151299" data-qqt-account="">zhongyz</span></div><p><a class="ds-comment-context" data-post-id="1324884023679385808" data-parent-id="1324884023679385805">回复 zhongyz: </a>补充：上面有个错别字，“当切换到第一个section是第2个slide时”  改成 “当切换到第一个section的第2个slide时”</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-17T17:35:48+08:00" title="2014年12月17日 17:35:48">2014年12月17日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385805"><div class="ds-post-self" data-post-id="1324884023679385805" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10151299"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/100(2)" alt="zhongyz"></div><div class="ds-comment-body"><div class="ds-comment-header"><span class="ds-user-name" data-user-id="10151299" data-qqt-account="">zhongyz</span></div><p>能不能做到这样的功能，第一个section有2个slide。当处于第一个slide时，上下滚动有3个section；当切换到第一个section是第2个slide时，上下滚动是另外的2个section（和前面的3个section不同），我特别需要这样的功能？希望官方可以放出这样的功能。或者联系我QQ：2963268344</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-17T17:34:24+08:00" title="2014年12月17日 17:34:24">2014年12月17日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶(1)</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385799"><div class="ds-post-self" data-post-id="1324884023679385799" data-thread-id="1324884023679385677" data-root-id="1324884023679385798" data-source="duoshuo"><div class="ds-avatar" data-user-id="1952278"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" title="dowebok"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117640.jpg" alt="dowebok"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" rel="nofollow" target="_blank" data-user-id="1952278">dowebok</a></div><p><a class="ds-comment-context" data-post-id="1324884023679385799" data-parent-id="1324884023679385798">回复 好一个Potato: </a>可以，自行添加就是了。</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-11T23:02:29+08:00" title="2014年12月11日 23:02:29">2014年12月11日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1324884023679385798"><div class="ds-post-self" data-post-id="1324884023679385798" data-thread-id="1324884023679385677" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10092892"><a rel="nofollow author" target="_blank" href="http://t.qq.com/lg262488346" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10092892&#39;;" title="好一个Potato"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(13)" alt="好一个Potato"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://t.qq.com/lg262488346" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=10092892&#39;;" rel="nofollow" target="_blank" data-user-id="10092892">好一个Potato</a></div><p>能够添加navigation导航的事件吗？ 比如把鼠标移到了导航上，就取消自动切换的功能，移开后又开始切换</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-11T17:12:45+08:00" title="2014年12月11日 17:12:45">2014年12月11日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li></ul><div class="ds-paginator"><div class="ds-border"></div><a data-page="1" href="javascript:void(0);" class="ds-current">1</a> <a data-page="2" href="javascript:void(0);">2</a> <a data-page="3" href="javascript:void(0);">3</a></div><p class="ds-powered-by"><a href="http://duoshuo.com/" target="_blank" rel="nofollow">dowebok正在使用多说</a></p></div></div>
+		</section>
+	</div>
+
+	<div class="secondary">
+		<!-- <aside>
+			<img style="display: block;" src="images/300x250.png" alt="">
+		</aside>
+
+		<aside>
+			<div class="asd2">
+				<h3><span>热门专题</span></h3>
+				<ul>
+					<li><img src="images/2.jpg" alt=""><a href="">fullPage.js制作网易邮箱6.0介绍页面</a></li>
+					<li><img src="images/3.jpg" alt=""><a href="">fullPage.js制作网易邮箱6.0介绍页面</a></li>
+					<li><img src="images/4.jpg" alt=""><a href="">fullPage.js制作网易邮箱6.0介绍页面</a></li>
+					<li><img src="images/6.jpg" alt=""><a href="">fullPage.js制作网易邮箱6.0介绍页面</a></li>
+					<li><img src="images/5.jpg" alt=""><a href="">fullPage.js制作网易邮箱6.0介绍页面</a></li>
+				</ul>
+			</div>
+		</aside> -->
+
+		<aside>
+			<div class="asd1">
+				<h3><span>热门文章</span></h3>
+				<ul>
+								<li><a href="http://www.dowebok.com/143.html" title="全屏/整屏滚动组件fullPage"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/143s.png" alt="全屏/整屏滚动组件fullPage"></a><a href="http://www.dowebok.com/143.html">全屏/整屏滚动组件fullPage</a></li>
+								<li><a href="http://www.dowebok.com/72.html" title="jQuery旋转插件jqueryrotate"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/72s.png" alt="jQuery旋转插件jqueryrotate"></a><a href="http://www.dowebok.com/72.html">jQuery旋转插件jqueryrotate</a></li>
+								<li><a href="http://www.dowebok.com/78.html" title="用fullPage.js制作百度百科史记2013效果"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/78s.jpg" alt="用fullPage.js制作百度百科史记2013效果"></a><a href="http://www.dowebok.com/78.html">用fullPage.js制作百度百科史记2013效果</a></li>
+								<li><a href="http://www.dowebok.com/97.html" title="fullPage.js制作网易邮箱6.0介绍页面"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/97s.jpg" alt="fullPage.js制作网易邮箱6.0介绍页面"></a><a href="http://www.dowebok.com/97.html">fullPage.js制作网易邮箱6.0介绍页面</a></li>
+								<li><a href="http://www.dowebok.com/131.html" title="WOW.js – 让页面滚动更有趣"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/131s.png" alt="WOW.js – 让页面滚动更有趣"></a><a href="http://www.dowebok.com/131.html">WOW.js – 让页面滚动更有趣</a></li>
+								</ul>
+
+				<!-- <ul>
+					<li>
+						<a href=""><img src="images/2.jpg" alt=""></a>
+						<a href="">fullPage.js制作网易邮箱6.0介绍页面</a>
+					</li>
+					<li>
+						<a href=""><img src="images/1.jpg" alt=""></a>
+						<a href="">强大的jQuery幻灯片插件allinone</a>
+					</li>
+					<li>
+						<a href=""><img src="images/3.jpg" alt=""></a>
+						<a href="">用fullPage.js制作百度百科史记2013效果</a>
+					</li>
+					<li>
+						<a href=""><img src="images/5.jpg" alt=""></a>
+						<a href="">jQuery覆盖对比插件Covering-Bad</a>
+					</li>
+					<li>
+						<a href=""><img src="images/4.jpg" alt=""></a>
+						<a href="">简单的jQuery图片相册插件simpleGal</a>
+					</li>
+				</ul> -->
+			</div>
+		</aside>
+
+		<aside>
+			<div class="asd1">
+				<h3><span>随机推荐</span></h3>
+				<ul>
+						
+
+<li><a href="http://www.dowebok.com/82.html" title="jQuery Lightbox效果插件Boxer"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/82s.jpg" alt="jQuery Lightbox效果插件Boxer"></a><a href="http://www.dowebok.com/82.html">jQuery Lightbox效果插件Boxer</a></li>
+		
+
+<li><a href="http://www.dowebok.com/132.html" title="Owl Carousel制作百度百科2014新首页幻灯片"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/132s.jpg" alt="Owl Carousel制作百度百科2014新首页幻灯片"></a><a href="http://www.dowebok.com/132.html">Owl Carousel制作百度百科2014新首页幻灯片</a></li>
+		
+
+<li><a href="http://www.dowebok.com/141.html" title="vTicker – jQuery垂直滚动插件"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/141s.png" alt="vTicker – jQuery垂直滚动插件"></a><a href="http://www.dowebok.com/141.html">vTicker – jQuery垂直滚动插件</a></li>
+		
+
+<li><a href="http://www.dowebok.com/40.html" title="jQuery垂直滚动插件Totem"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/40s.jpg" alt="jQuery垂直滚动插件Totem"></a><a href="http://www.dowebok.com/40.html">jQuery垂直滚动插件Totem</a></li>
+		
+
+<li><a href="http://www.dowebok.com/27.html" title="jQuery响应式侧栏菜单插件sidr"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/27s.png" alt="jQuery响应式侧栏菜单插件sidr"></a><a href="http://www.dowebok.com/27.html">jQuery响应式侧栏菜单插件sidr</a></li>
+					
+				</ul>
+			</div>
+		</aside>
+
+		<aside>
+			<div class="asd3">
+				<h3 class="tt1"><span>最新评论</span></h3>
+				<!-- <ul>
+				<li title="给力！"><a href="http://www.dowebok.com/61.html#comment-389" title="诸葛小觉">诸葛小觉</a>: 给力！</li><li title="同问，迫切想知道，怎样改这个水平居中问题。"><a href="http://www.dowebok.com/77.html#comment-388" title="MRJayChui">MRJayChui</a>: 同问，迫切想知道，怎样改这个水平居中问题。</li><li title="动画是通过切换 class 实现的，用 firebug 查看就知道了。"><a href="http://www.dowebok.com/97.html#comment-386" title="dowebok">dowebok</a>: 动画是通过切换 class 实现的，用 firebug 查看就知道了。</li><li title="动画的事件触发代码在哪儿？找了半天没找到啊。。。。"><a href="http://www.dowebok.com/97.html#comment-385" title="圆哆哆">圆哆哆</a>: 动画的事件触发代码在哪儿？找了半天没找到啊。。。。</li><li title="恩恩，是的。但是，他是在 body中高度自动上下居中   请问这个高度可以手动调整吗"><a href="http://www.dowebok.com/77.html#comment-384" title="color丶苏色">color丶苏色</a>: 恩恩，是的。但是，他是在 body中高度自动上下居中   请问这个高度可以手动调整吗</li><li title="&lt;div class=&quot;section&quot;&gt;
+	&lt;div class=&quot;slide&quot;&gt;&lt;h3&gt;第二屏的第一屏&lt;/h3&gt;&lt;/div&gt;
+	&lt;div class=&quo"><a href="http://www.dowebok.com/78.html#comment-383" title="chenchen">chenchen</a>: &lt;div class=&quot;section&quot;&gt;
+	&lt;div class=&quot;slide&quot;&gt;&lt;h3&gt;第二屏的第一屏&lt;/h3&gt;&lt;/div&gt;
+	&lt;div class=&quo</li><li title="请问，如果我想现实section里添加slide进行左右滑动，需要作何修改。我是菜鸟，请教各位大神~"><a href="http://www.dowebok.com/78.html#comment-382" title="v-sdeng">v-sdeng</a>: 请问，如果我想现实section里添加slide进行左右滑动，需要作何修改。我是菜鸟，请教各位大神~</li><li title="不能下载，想哭"><a href="http://www.dowebok.com/10.html#comment-381" title="王艳丽">王艳丽</a>: 不能下载，想哭</li><li title="找出问题所在了，是因为substring输出的是字符串类型；必须转换成整形，rotate才能识别"><a href="http://www.dowebok.com/72.html#comment-380" title="崇远网站建设">崇远网站建设</a>: 找出问题所在了，是因为substring输出的是字符串类型；必须转换成整形，rotate才能识别</li><li title="$('.circle').each(function(){
+    var deg=$(this).find('.circle_d').text()
+    deg=deg.substring(0,deg.length-1)
+    console.log(deg)
+    $(this)."><a href="http://www.dowebok.com/72.html#comment-379" title="崇远网站建设">崇远网站建设</a>: $('.circle').each(function(){
+    var deg=$(this).find('.circle_d').text()
+    deg=deg.substring(0,deg.length-1)
+    console.log(deg)
+    $(this).</li>				</ul> -->
+				<ul class="ds-recent-comments" data-show-title="0" id="ds-recent-comments"><li class="ds-comment ds-show-avatars" data-post-id="1324884023679385936"><div class="ds-avatar"><a rel="nofollow author" target="_blank" href="http://www.zhugexiaojue.com/" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=539647&#39;;" title="诸葛小觉"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50" alt="诸葛小觉" style="width:32px;height:32px"></a></div><div class="ds-meta"><a rel="nofollow author" target="_blank" href="http://www.zhugexiaojue.com/">诸葛小觉</a><span class="ds-time" datetime="2015-03-12T10:14:37+08:00" title="2015年3月12日 10:14:37">3月12日</span></div><a class="ds-excerpt" title="jQuery仿Google Play幻灯片效果插件plusview 中的评论" href="http://www.dowebok.com/61.html#comments">给力！</a></li><li class="ds-comment ds-show-avatars" data-post-id="1324884023679385933"><div class="ds-avatar"><a rel="nofollow author" target="_blank" href="http://weibo.com/mrjaychui" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=11074747&#39;;" title="MRJayChui"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/1(3)" alt="MRJayChui" style="width:32px;height:32px"></a></div><div class="ds-meta"><a rel="nofollow author" target="_blank" href="http://weibo.com/mrjaychui">MRJayChui</a><span class="ds-time" datetime="2015-03-10T16:07:24+08:00" title="2015年3月10日 16:07:24">3月10日</span></div><a class="ds-excerpt" title="jQuery?? 中的评论" href="http://www.dowebok.com/77.html#comments">同问，迫切想知道，怎样改这个水平居中问题。</a></li><li class="ds-comment ds-show-avatars" data-post-id="1324884023679385932"><div class="ds-avatar"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dowebok" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=1952278&#39;;" title="dowebok"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/117640.jpg" alt="dowebok" style="width:32px;height:32px"></a></div><div class="ds-meta"><a rel="nofollow author" target="_blank" href="http://t.qq.com/dowebok">dowebok</a><span class="ds-time" datetime="2015-03-04T13:02:09+08:00" title="2015年3月4日 13:02:09">3月4日</span></div><a class="ds-excerpt" title="fullPage.js制作网易邮箱6.0介绍页面 中的评论" href="http://www.dowebok.com/97.html#comments">动画是通过切换 class 实现的，用 firebug 查看就知道了。</a></li><li class="ds-comment ds-show-avatars" data-post-id="1324884023679385931"><div class="ds-avatar"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/100(3)" alt="圆哆哆" style="width:32px;height:32px"></div><div class="ds-meta">圆哆哆<span class="ds-time" datetime="2015-03-04T10:10:52+08:00" title="2015年3月4日 10:10:52">3月4日</span></div><a class="ds-excerpt" title="fullPage.js制作网易邮箱6.0介绍页面 中的评论" href="http://www.dowebok.com/97.html#comments">动画的事件触发代码在哪儿？找了半天没找到啊。。。。</a></li><li class="ds-comment ds-show-avatars" data-post-id="1324884023679385930"><div class="ds-avatar"><a rel="nofollow author" target="_blank" href="http://t.qq.com/a113053788" onclick="this.href=&#39;http://dowebok.duoshuo.com/user-url/?user_id=9180668&#39;;" title="color丶苏色"><img src="./jQuery全屏滚动插件fullPage.js_dowebok_files/50(1)" alt="color丶苏色" style="width:32px;height:32px"></a></div><div class="ds-meta"><a rel="nofollow author" target="_blank" href="http://t.qq.com/a113053788">color丶苏色</a><span class="ds-time" datetime="2015-03-02T17:38:02+08:00" title="2015年3月2日 17:38:02">3月2日</span></div><a class="ds-excerpt" title="jQuery?? 中的评论" href="http://www.dowebok.com/77.html#comments">恩恩，是的。但是，他是在 body中高度自动上下居中[吃惊] 请问这个高度可以手动调整吗</a></li></ul>
+			</div>
+		</aside>
+
+		<aside>
+			<div class="asd3">
+			<script type="text/javascript">
+			var sogou_ad_id=349385;
+			var sogou_ad_height=250;
+			var sogou_ad_width=300;
+			</script>
+			<script type="text/javascript" src="./jQuery全屏滚动插件fullPage.js_dowebok_files/c.js"></script>
+			</div>
+		</aside>
+	</div>
+</div>
+
+<script>
+var duoshuoQuery = {short_name:'dowebok'};
+</script>
+<script src="./jQuery全屏滚动插件fullPage.js_dowebok_files/embed.js"></script>
+<script src="./jQuery全屏滚动插件fullPage.js_dowebok_files/jquery.min.js"></script>
+<script>
+var viewsCacheL10n = {"admin_ajax_url":"http:\/\/www.dowebok.com\/wp-admin\/admin-ajax.php","post_id":"77"};
+</script>
+<script src="./jQuery全屏滚动插件fullPage.js_dowebok_files/postviews-cache.js"></script>
+
+<footer class="ft">
+	<p>© CopyRight 2014 dowebok.com</p>
+</footer>
+
+<div class="tongji">
+	<script src="./jQuery全屏滚动插件fullPage.js_dowebok_files/hm.js"></script>
+	<script src="./jQuery全屏滚动插件fullPage.js_dowebok_files/stat.php"></script><script src="./jQuery全屏滚动插件fullPage.js_dowebok_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1253231826" target="_blank" title="站长统计">站长统计</a>
+</div>
+<div id="share2">
+	
+</div>
+
+<div id="ds-notify" style="top: 24px; right: 24px; display: none;"><div id="ds-reset"><a class="ds-logo" href="http://duoshuo.com/" target="_blank" title="多说"></a><ul class="ds-notify-unread"><li style="display:none;"><a data-type="unread-comments" href="javascript:void(0);">你有undefined条新回复</a></li><li style="display:none;"><a data-type="unread-notifications" href="javascript:void(0);">你有undefined条系统消息</a></li></ul></div></div></body></html>
