@@ -1,0 +1,42 @@
+.box{
+	width: 960px;
+}
+.c .box h3{
+	font-size: 30px;
+}
+.bg1{
+	height: 740px;
+	background: url(../images/zijin/960-1.jpg) no-repeat center 83px;
+}
+.bg2{
+	height: 740px;
+	background:#ffe3c1 url(../images/zijin/960-2.jpg) no-repeat center center;
+}
+.bg3{
+	height: 740px;
+	background:#fff6ed url(../images/zijin/960-3.jpg) no-repeat center center;
+}
+.bg4{
+	height: 740px;
+	background:#d4edcf url(../images/zijin/960-4.jpg) no-repeat center center;
+}
+.bg5{
+	height: 740px;
+	background:#aadaff url(../images/zijin/960-5.jpg) no-repeat center center;
+}
+.bg6{
+	height: 740px;
+	background:#e7f5ff url(../images/zijin/960-6.jpg) no-repeat center center;
+}
+.bg7{
+	height: 740px;
+	background:#ffd9ba url(../images/zijin/960-7.jpg) no-repeat center center;
+}
+.bg8{
+	height: 740px;
+	background:#b9ecff url(../images/zijin/960-8.jpg) no-repeat center center;
+}
+.bg9{
+	height: 740px;
+	background:#82c5f2 url(../images/zijin/960-9.jpg) no-repeat center -100px;
+}

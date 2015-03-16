@@ -1,0 +1,183 @@
+.box{
+	width: 960px;
+}
+.c .box h3{
+	font-size: 30px;
+}
+.bg1{
+	height: 780px;
+	background: url(../images/huankuan/960-1.jpg) no-repeat center 83px;
+}
+/*.bg1 .text1{
+	top:120px;
+	left: 175px;
+	width:220px;
+}
+.bg1 .text2{
+	top: 132px;
+	left: 665px;
+}*/
+.bg2{
+	height: 780px;
+	background: url(../images/huankuan/960-2.jpg) no-repeat center center;
+}
+.bg2 h3{
+	top: 260px;
+	left: 0px;
+}
+.bg2 .text1{
+	top: 340px;
+	left: 0px;
+	width:440px;
+	line-height: 30px;
+	font-size: 14px;
+}
+/*.bg2 .text2{
+	top: 110px;
+	left: 360px;
+	width:235px;
+}
+.bg2 .text3{
+	top: 90px;
+	left: 655px;
+}*/
+.bg3{
+	height: 780px;
+	background: url(../images/huankuan/960-3.jpg) no-repeat center center;
+}
+.bg3 h3{
+	top: 85px;
+	left: 0px;
+}
+/*.bg3 .text1{
+	top: 175px;
+	left: 255px;
+}
+.bg3 .text2{
+	top: 130px;
+	left: 715px;
+}*/
+.bg4{
+	height: 780px;
+	background: url(../images/huankuan/960-4.jpg) no-repeat center center;
+}
+.bg4 h3{
+	top: 30px;
+	left: 0px;
+	line-height: 45px;
+}
+/*.bg4 .text1{
+	top: 170px;
+	left: 131px;
+	width:280px;
+}
+.bg4 .text2{
+	top: 165px;
+	left: 650px;
+	width:235px;
+	color: #333;
+}*/
+.bg5{
+	height: 780px;
+	background: url(../images/huankuan/960-5.jpg) no-repeat center center;
+}
+.bg5 h3{
+	top: 130px;
+	left: 0px;
+}
+/*.bg5 .text1{
+	top: 145px;
+	left: 170px;
+}
+.bg5 .text2{
+	top: 182px;
+	left: 710px;
+	color: #333;
+}*/
+.bg6{
+	height: 780px;
+	background: url(../images/huankuan/960-6.jpg) no-repeat center center;
+}
+.bg6 h3{
+	top: 75px;
+	left: 0px;
+}
+/*.bg6 .text1{
+	top: 145px;
+	left: 295px;
+}
+.bg6 .text2{
+	top: 210px;
+	left: 710px;
+}*/
+.bg7{
+	height: 780px;
+	background: url(../images/huankuan/960-7.jpg) no-repeat center center;
+}
+.bg7 h3{
+	top: 80px;
+	left: 0px;
+}
+/*.bg7 .text1{
+	top: 215px;
+	left: 185px;
+}
+.bg7 .text2{
+	top: 217px;
+	left: 673px;
+}*/
+.bg8{
+	height: 780px;
+	background: url(../images/huankuan/960-8.jpg) no-repeat center center;
+}
+.bg8 h3{
+	width: 215px;
+	top: 130px;
+	left: 0px;
+	line-height: 45px;
+}
+/*.bg8 .text1{
+	width: 220px;
+	top: 170px;
+	left: 350px;
+}
+.bg8 .text2{
+	top: 220px;
+	left: 735px;
+}*/
+.bg9{
+	height: 780px;
+	background: url(../images/huankuan/960-9.jpg) no-repeat center center;
+}
+.bg9 h3{
+	top: 70px;
+	left: 0px;
+}
+/*.bg9 .text1{
+	top: 175px;
+	left: 200px;
+}
+.bg9 .text2{
+	top: 180px;
+	left: 560px;
+}*/
+.bg10{
+	height: 780px;
+	background: url(../images/huankuan/960-10.jpg) no-repeat center -100px;
+}
+.bg10 h3{
+	top: 30px;
+	left: 0px;
+}
+/*.bg10 .text1{
+	top: 180px;
+	left: 180px;
+}
+.bg10 .text2{
+	top: 156px;
+	left: 543px;
+}*/
+.bg11 {
+	height: 140px;
+	line-height: 140px;
+}
