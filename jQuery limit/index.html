@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<title>超出文字省略并增加省略号（修改版）</title>
+	<script id="jquery_183" type="text/javascript" class="library" src="/js/sandbox/jquery/jquery-1.8.3.min.js"></script>
+	<style>
+		*{ margin:0; padding:8px;font-family:'宋体',Arial, Helvetica, sans-serif;color:#fff;background:#444;}
+
+	</style>
+</head>
+<body>
+	<div limit='280' class="summary">
+		<p>当下，互联网已从一种工具变成一种思维，一种文化，一种工作和一种生活的状态。</p>
+		<p>很多人提问，互联网思维是什么？官方定义上，互联网思维，就是在（移动）互联网、大数据、云计算等科技不断发展的背景下，对市场、对用户、对产品、对企业价值链乃至对整个商业生态的进行重新审视的思考方式。</p>
+		<p>在2014年11月28日下午两点在科兴科学园，无界财富互联网俱乐部的发起人，无界财富CEO张博给我们分享了一节生动有趣的讲座，诠释了他的互联网思维。</p>
+		<p>张博提出数据引出二八原则、长尾定律的犀利见解和参与式设计等在当今数据大爆炸今数大数......</p>
+	</div>
+	<script>
+		$.fn.limit=function(){
+			var self = $('div[limit]');
+			self.each(function(){
+				var objString = $(this).html();
+				var objLength = $(this).html().length;
+				var num = $(this).attr('limit');
+				if(objLength > num){
+					$(this).attr('title',objString);
+					objString = $(this).html(objString.substring(0,num) + '...');
+				}
+			})
+		};
+		$(function(){
+			$(".summary").limit();
+		});
+	</script>
+</body>
+</html>
