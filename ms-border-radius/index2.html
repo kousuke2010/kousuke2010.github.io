@@ -7,7 +7,9 @@
 			background-color: #fff;
 		}
 		#bordered {
-			padding: 50px;
+			width: 800px;
+			height: 300px;
+			display: block;
 			background: #990;
 			-moz-border-radius: 20px;
 			-webkit-border-radius: 20px;
@@ -16,10 +18,11 @@
 		#cornered {
 			width: 500px;
 			height: 200px;
-			background: #099 url(cassette.png) 30px 30px;
+			background: #099 url(cassette.png) center center;
 			color: #fff;
 			text-align: center;
 			vertical-align: middle;
+			height: 200px;
 			line-height: 200px;
 			-moz-border-radius: 10px 40px 0 60px;
 			-webkit-border-radius: 10px 40px 0 60px;
@@ -28,10 +31,10 @@
 			border: 6px solid red;
 		}
 		#corneredliquid {
-			background: transparent url(pigeon.jpg) no-repeat 80px bottom;
 			color: #fff;
 			text-align: center;
 			vertical-align: middle;
+			height:200px;
 			line-height: 200px;
 			-moz-border-radius: 10px 40px 0 60px;
 			-webkit-border-radius: 10px 40px 0 60px;
@@ -40,19 +43,19 @@
 			border: 1px solid black;
 		}
 	</style>
+</head>
+<body>
+	<div id="cornered"></div>
+	<div id="corneredliquid"></div>
+	<div id="bordered"></div>
+	<script src="js/jquery-1.9.0.min.js"></script>
 	<script type="text/javascript" src="js/msbr.js"></script>
 	<script type="text/javascript">
-		function cornered(){
+		$(function(){
+			msbr('cornered');
 			msbr('corneredliquid');
-			msbr(document.getElementById('cornered'));
 			msbr('bordered');
-		}
+		});
 	</script>
-</head>
-<body onload="cornered();">
-	<div id="bordered">
-		<div id="cornered"><a href="javascript:cornered();">Cornered!</a></div>
-		<div id="corneredliquid"><a href="javascript:cornered();">Cornered!</a></div>
-	</div>
 </body>
 </html>
