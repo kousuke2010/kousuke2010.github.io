@@ -1,4 +1,3 @@
-//http://www.suning.com/
 (function($){
     $.fn.ckSlide = function(opts){
         opts = $.extend({}, $.fn.ckSlide.opts, opts);
