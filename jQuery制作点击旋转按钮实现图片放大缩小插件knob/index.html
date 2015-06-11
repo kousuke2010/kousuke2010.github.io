@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery制作点击旋转按钮实现图片放大缩小插件knob - xw素材网</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="http://192.168.3.213:81/Public/js/plugin/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery.knob-1.0.1.js"></script>
+        <script>
+            $(function() {
+                $(".knob").knob({
+					max: 940,
+					min: 500,
+					thickness: .3,
+					fgColor: '#2B99E6',
+					bgColor: '#303030',
+					'release':function(e){
+						$('#img').animate({width:e});
+					}
+                });
+
+				$(".knob2").knob({
+					'release':function(e){
+						$('#img').animate({width:e});
+					}
+				});
+            });
+        </script>
+		<style>
+			body{
+				background: #202020;
+			}
+			header{
+				margin: 0 auto;
+				width: 960px;
+				color: #808080;
+				font-weight: bold;
+				font-family: Arial;
+			}
+
+			header h1{
+				font-size: 44px;
+			}
+
+			#container{
+				margin: 0 auto;
+				padding:0;
+				width: 960px;
+				border: 10px solid #303030;
+				border-radius: 5px 5px 5px 5px;
+				background: #000;
+				box-shadow: 0px 0px 30px #2B99E6;
+			}
+
+			#imgwrapper{
+				width: 460px;
+				float: left;
+				text-align: center;
+				padding:0;
+				margin:0;
+			}
+
+			#knobwrapper{
+				width: 300px;
+				float: right;
+				text-align: center;
+			}
+
+			#img{
+				margin: 0 auto;
+				width: 500px;
+				border-radius: 5px 5px 5px 5px;
+			}
+
+			.clear{
+				clear:both;
+			}
+		</style>
+    </head>
+    <body>
+		<header>
+			<h1>jQuery Knob Demo</h1>
+		</header>
+		<div id="container">
+			<div id="imgwrapper">
+				<img id="img" src="img/super.jpg" />
+			</div>
+			<div id="knobwrapper">
+				<input class="knob" data-width="300" data-skin="tron" data-displayInput="true" value="200">
+				<div>
+				<input class="knob2" data-width="150" data-fgColor="green" data-bgColor="#303030" data-skin="tron" data-thickness=".3" data-min="200" data-max="600" value="200">
+				</div>
+			</div>
+
+
+			<div class="clear"></div>
+		</div>
+
+    </body>
+</html>
