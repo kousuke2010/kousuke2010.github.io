@@ -1,13 +1,13 @@
 // 复制到剪切板
 $(function(){
 	$(".copy1").zclip({
-		path: "ZeroClipboard.swf",
+		path: "http://kousuke2010.github.io/cthtool/plugin/js/tool.js",
 		copy: function(){
 			return $("#source").val();
 		}
 	});
 	$(".copy2").zclip({
-		path: "ZeroClipboard.swf",
+		path: "http://kousuke2010.github.io/cthtool/plugin/js/tool.js",
 		copy: function(){
 			return $("#fixed").val();
 		}
