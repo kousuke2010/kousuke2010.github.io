@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Testing mousewheel plugin</title>
+</head>
+<body>
+	<h1 id="banner">jQuery mousewheel.js Test with jQuery <span id="jqueryVersion"></span></h1>
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script>
+		$(function() {
+			$(document).mousewheel(function(event, delta) {
+				if(event.deltaY>0) {
+					$('body').append(' up <br>');
+				}else if(event.deltaY<0){
+					$('body').append(' down <br>');
+				};
+			});
+		});
+	</script>
+</body>
+</html>
