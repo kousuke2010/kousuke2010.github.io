@@ -1,0 +1,40 @@
+		<section class="p4 clearfix">
+			<div class="box box1">
+				<p class="title">活动社群<i></i><a href="/club">更多>></a></p>
+				<ul>
+					<volist name="past_activity" id="past" key="key">
+						<li class="pic{$key}">
+							<a target="_blank" href="{$past.real_url}">
+								<img src="{$past.photo}">
+								<p class="headline">{$past.subject|cut_str=###,28}</p>
+							</a>
+						</li>
+					</volist>
+				</ul>
+			</div>
+			<div class="box box2">
+				<p class="title">
+					<span class="post on">发行公告</span>
+					<span class="get">还款公告</span>
+					<i></i>
+					<a href="/gonggao/tags-687.html" class="postlink">更多>></a>
+					<a href="/gonggao/tags-688.html" class="getlink">更多>></a>
+				</p>
+				<ul class="postlist">
+					<volist name="infoNews_1" id="vo">
+						<li>
+							<time>{$vo.create_time}</time>
+							<a target="_blank" href="{:createUrl('News/newsDetails', array('cid'=>$vo['category_id'], 'id'=>$vo['id']))}"><eq name="vo['is_new']" value="1"><i>new</i></eq>{$vo.subject}</a>
+						</li>
+					</volist>
+				</ul>
+				<ul class="getlist">
+					<volist name="infoNews_2" id="vo">
+						<li>
+							<time>{$vo.create_time}</time>
+							<a target="_blank" href="{:createUrl('News/newsDetails', array('cid'=>$vo['category_id'], 'id'=>$vo['id']))}"><eq name="vo['is_new']" value="1"><i>new</i></eq>{$vo.subject}</a>
+						</li>
+					</volist>
+				</ul>
+			</div>
+		</section>
