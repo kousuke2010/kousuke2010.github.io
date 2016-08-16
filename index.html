@@ -6,7 +6,7 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">发贴日期: <time>{{ post.date | date: "%Y-%m-%d" }}</time> · 标签: {{ post.tags }} · 栏目: {{ post.categories }}</span>
+        <span class="post-meta">发贴日期: <time>{{ post.date | date: "%Y-%m-%d" }}</time> · 标签: <a href="/tags/{{ post.tags }}">{{ post.tags }}</a> · 栏目: {{ post.categories }}</span>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>

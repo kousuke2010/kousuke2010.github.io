@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "jekyll 学习笔记一"
+title:  "jekyll 学习笔记一——安装和变量说明"
 date:   2016-08-16 14:49:03 +0800
 categories: notes
 tags: jekyll
