@@ -169,6 +169,15 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+
+    article {
+        img {
+            max-width: 86%;
+            border: 1px solid #ccc;
+            display: block;
+            margin: 0 auto;
+        }
+    }
 }
 
 .page-heading {
