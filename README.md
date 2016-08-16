@@ -1,7 +1,3 @@
 #kousuke2010.github.io 站点下文件目录
 
-##包含文件
-
- + 12
-  - 45456
-  - 156456
+## http://kousuke2010.github.io/
