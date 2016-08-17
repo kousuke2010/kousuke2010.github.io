@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "jekyll 学习笔记三——无插件添加标签页"
+title:  "jekyll 无插件添加标签页"
 date:   2016-08-16 22:19:03 +0800
 categories: notes
 tags: jekyll
