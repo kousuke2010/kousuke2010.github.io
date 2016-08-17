@@ -46,7 +46,7 @@ jekyll serve --watch
 
 `_drafts` 未发布文章存放文件夹，我安装的时候没出现过，不明觉厉.[_drafts学习链接][_drafts学习链接]
 
-`_includes` 模版文件中将 `_includes` 文件夹中的文件进行调用，调用方式：[\% include file.ext %]
+`_includes` 模版文件中将 `_includes` 文件夹中的文件进行调用，调用方式：[% include file.ext %]
 
 `_layouts` `layouts`是包裹在文章外部的模板，通过标签 [[ content ]]可以将 `content` 插入页面中.
 
@@ -114,19 +114,19 @@ excerpt: "摘抄内容"
 
 `\| strip_html` 在过滤器中添加该项可以在输出内容中去除一些 `html tags`
 
-[\% for post in site.posts %] `<li><a href="[[ post.url ]]">[[ post.title ]]</a></li>[% endfor %]`一个普通的文章列表循环例子
+[% for post in site.posts %] `<li><a href="[[ post.url ]]">[[ post.title ]]</a></li>[% endfor %]`一个普通的文章列表循环例子
 
 ### Liquid 标签
 
-[\% include footer.html %] 调用 `_include` 文件夹中文件，上文说到过
+[% include footer.html %] 调用 `_include` 文件夹中文件，上文说到过
 
-[\% include footer.html param="value" %] 通过 `include` 标签传递参数
+[% include footer.html param="value" %] 通过 `include` 标签传递参数
 
 [[ include.param ]] 调用上述放出传递的参数
 
-[\% highlight ruby linenos%][\% endhighlight %] 代码高亮以及显示行数
+[% highlight ruby linenos%][% endhighlight %] 代码高亮以及显示行数
 
-[\% post_url 2016-03-26-welcome-to-jekyll %] 调用某篇文章的链接，post_url 右边是不包含文件后缀的文件名，举个栗子:`[Name of Link]([\% post_url 2010-07-21-name-of-post %])`
+[% post_url 2016-03-26-welcome-to-jekyll %] 调用某篇文章的链接，post_url 右边是不包含文件后缀的文件名，举个栗子:`[Name of Link]([% post_url 2010-07-21-name-of-post %])`
 
 ### 图片和文件的调用
 ```markdown
