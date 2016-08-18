@@ -6,7 +6,7 @@ layout: default
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta">
         发帖日期: <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: '%Y-%m-%d' }}</time>
-        {% if page.tags %} • <span itemprop="tags" itemscope itemtype="http://schema.org/Person">标签: <a href="/tags/{{ page.tags }}" itemprop="name">{{ page.tags }}</a></span>{% endif %}
+        {% if page.tags %} • <span itemprop="tags" itemscope itemtype="http://schema.org/Person">标签: <a href="/tags/#{{ page.tags }}" itemprop="name">{{ page.tags }}</a></span>{% endif %}
         {% if page.categories %} • <span itemprop="categories" itemscope itemtype="http://schema.org/Person">标签: <a href="/cat/{{ page.categories }}" itemprop="name">{{ page.categories }}</a></span>{% endif %}
         {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
     </p>
