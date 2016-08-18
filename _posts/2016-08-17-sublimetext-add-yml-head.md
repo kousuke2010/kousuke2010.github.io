@@ -3,7 +3,7 @@ layout: post
 title: "Sublimetext 添加 jekyll YAML 头部信息快捷键"
 date: 2016-08-17 16:14:17 +0800
 categories: soft
-tags: sublimetext
+tags: sublimetext jekyll
 permalink: /:categories/:month-:day-:title
 excerpt: #为空的清空默认摘要
 ---
