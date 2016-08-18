@@ -262,9 +262,18 @@
 
     h4 {
         font-size: 20px;
+        margin-bottom: $spacing-unit - 25;
 
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+}
+
+blockquote {
+    p {
+        font-family: 'microsoft yahei';
+        font-size: 15px;
+        margin-bottom: 0;
     }
 }
