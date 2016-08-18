@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h1>{{ page.categories }}</h1>
+<h1 id="{{ page.categories }}">{{ page.categories }}</h1>
 
 <ul>
 {% for post in site.categories[page.categories] %}
@@ -10,3 +10,10 @@ layout: default
   </li>
 {% endfor %}
 </ul>
+
+<menu>
+    其他栏目<br>
+    {% for categories in site.categories %}
+    <a href="/cat/{{ categories | first }}">{{ categories | first }}</a>
+    {% endfor %}
+</menu>
