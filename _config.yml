@@ -24,10 +24,10 @@ paginate: 3 # 每页显示
 paginate_path: "page:num"
 
 # 排除 build 文件
-exclude:
-  - "/node_modules/"
-  - "package.json"
-  - "gulpfile.js"
+# exclude:
+#   - "/node_modules/"
+#   - "package.json"
+#   - "gulpfile.js"
 
 # Build settings
 markdown: kramdown
