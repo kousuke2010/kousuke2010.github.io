@@ -178,6 +178,21 @@
             margin: 0 auto;
         }
     }
+    .wrapper {
+        menu {
+            padding: 0;
+
+            a {
+            display: inline-block;
+            margin-right: 8px;
+            padding: 0 6px;
+            }
+            a:hover {
+                text-decoration: none;
+                background: #eee;
+            }
+        }
+    }
 }
 
 .page-heading {
