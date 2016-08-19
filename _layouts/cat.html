@@ -14,6 +14,6 @@ layout: default
 <menu>
     其他栏目<br>
     {% for categories in site.categories %}
-    <a href="/cat/{{ categories | first }}">{{ categories | first }}</a>
+    <a href="/{{ categories | first }}">{{ categories | first }}</a>
     {% endfor %}
 </menu>
