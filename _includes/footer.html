@@ -27,6 +27,9 @@
 <script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
 <script>
     // highlight box optimize
+    $('.highlight').each(function(){
+        if( $(this).find('code table').length > 0 ) $(this).find('code').css('display','table');
+    });
     var oriHighlightWidth = $('.highlight').width();
     var rightBlank = ($(window).width() - oriHighlightWidth) / 2;
     var limitWidth = oriHighlightWidth + rightBlank;
@@ -40,7 +43,7 @@
     });
     $('.highlight').mouseleave(function() {
         $(this).animate({
-            'width': oriHighlightWidth
+            'width': oriHighlightWidth - 24
         });
     });
 </script>
