@@ -199,19 +199,51 @@
     font-size: 20px;
 }
 
-.post-list {
-    margin-left: 0;
-    list-style: none;
+.home {
+    .titleonly {
+        font-size: 14px;
+        color: #666;
+    }
+    .post-list {
+        margin-left: 0;
+        list-style: none;
 
-    h2{
-        margin-bottom: 0;
+        h2{
+            margin-bottom: 0;
+        }
+        > li {
+            border-bottom: 1px dashed #ddd;
+            margin-bottom: $spacing-unit;
+        }
+        > li:last-child{
+            border-bottom: 0;
+        }
     }
-    > li {
-        border-bottom: 1px dashed #ddd;
-        margin-bottom: $spacing-unit;
-    }
-    > li:last-child{
-        border-bottom: 0;
+}
+
+.home-list {
+    .post-list {
+        li {
+            height: 27px;
+            margin: 6px 0;
+        }
+        .post-link {
+            width: 645px;
+            display: block;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            float: left;
+        }
+        time {
+            width: 82px;
+            display: block;
+            font-size: 16px;
+            color: #999;
+            margin-right: 8px;
+            float: left;
+        }
     }
 }
 
