@@ -6,7 +6,6 @@ categories: notes
 tags: jekyll
 permalink: /:categories/:month-:day-:title
 excerpt: #为空的清空默认摘要
-published: false
 ---
 Jekyll 新版本在 Jekyll serve 中推出了 --watch 以监听其源文件的变化,前几天在学习的时候也一直在使用这个命令,不过可能是运行多次检测到失效的可能吧,这一次执行命令的时候出现提示:
 
