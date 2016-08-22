@@ -6,7 +6,6 @@ categories: soft
 tags: chrome
 permalink: /:categories/:month-:day-:title
 excerpt: #为空的清空默认摘要
-published: false
 ---
 *由于国内的关系，也不喜欢翻墙，所以一般使用 Chrome 插件都是直接通过浏览器应用中心直接下载安装的，所以以下大部分都能够在应用中心安装，对于部分应用中心所没有的也会提供网盘等其他下载方式。*
 
