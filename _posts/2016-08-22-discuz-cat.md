@@ -1,0 +1,190 @@
+---
+layout: post
+title: "discuz!默认模板文件说明"
+date: 2016-08-22 11:10:31 +0800
+categories: notes
+tags: discuz
+permalink: /:categories/:month-:day-:title
+excerpt: #为空的清空默认摘要
+---
+### 公共模板文件夹 `./template/default/common/`
+* common.css `公共CSS文件`
+* faq.htm `帮助模板文件`
+* footer.htm `系统总底部模板`
+* footer_ajax.htm `ajax模式是使用到系统总底部模板,ajax模式大部分为浮动框登录、注册、发帖等`
+* forum_calendar.css `广场社区使用到的日历日期样式`
+* header.htm `系统头部文件`
+* header_common.htm `系统公共头部文件`
+* header_ajax.htm `ajax模式时使用到的系统头部文件`
+* header_diy.htm `diy面板模板文件`
+* invite.htm `邀请好友模板文件`
+* module.css `模板样式文件,用于模块的拆分并生成相应的css样式`
+* preview.htm `预览的模板文件`
+* showmessage.htm `系统提示信息模板文件`
+* userabout.htm `个人中心面板文件`
+* widthauto.css `宽屏模式追加的css文件`
+
+### 论坛模板文件夹 `./template/default/forum`
+* activity_applylist.htm `活动列表文件`
+* activity_export.htm `活动资料内容文件`
+* announcement.htm `广场公告文件`
+* attachpay.htm `附件金币积分支付模板文件`
+* attachpay_view.htm `附件金币积分支付查看模板文件`
+* ajax_attachlist.htm `ajax获取附件列表模板文件`
+* collection_add.htm `淘帖创建淘专辑页面模板`
+* collection_all.htm `淘帖所有专辑页面`
+* collection_comment.htm `淘帖专辑评论列表页`
+* collection_mycollection.htm `淘帖个人创建专辑`
+* collection_index.htm `淘帖首页推荐专辑`
+* collection_nav.htm `淘帖面包屑下淘帖导航部分`
+* collection_view.htm `淘帖具体专辑页面`
+* comment.htm `评论模版`
+* comment_more.htm `更多评论模板`
+* debate_umpire.htm `辩论模版文件`
+* discuz.htm `论坛首页模板文件【基础】`
+* forumdisplay.htm `论坛板块主题列表总模版文件`
+* forumdisplay_list.htm `论坛版块具体主题列表模板文件`
+* forumdisplay_passwd.htm `论坛需要密码访问的板块模板文件`
+* forumdisplay_subforum.htm `论坛子版块列表模板文件`
+* index_navbar.htm `邀请模板文件《=？？？`
+* modcp.htm `管理面板模版`
+* pay.htm `支付页面模板`
+* pay_view.htm `支付结果查看模板`
+* post.htm `发帖总模版`
+* post_activity.htm `活动发布页面模板`
+* post_debate.htm `辩论发布模板`
+* post_poll.htm `投票贴发布模板`
+* post_reward.htm `悬赏贴发布模板`
+* post_sortoption.htm `主题分类选择模板`
+* post_trade.htm `交易帖发布模板`
+* rate.htm `主题评分模板`
+* rate_view.htm `主题评分查看模板`
+* recommend.htm `主题推荐模板`
+* trade.htm `商品交易主题模板`
+* trade_displayorder.htm `商品交易模板`
+* trade_info.htm `商品交易详细资料模板`
+* trade_view.htm `商品交易浏览页面模板`
+* viewthread.htm `看帖页面模板`
+* viewthread_activity.htm `查看活动页面模板`
+* viewthread_debate.htm `查看辩论页面模板`
+* viewthread_fastpost.htm `快速回复模板`
+* viewthread_from_node.htm `特殊回复模板`
+* viewthread_mod.htm `主题操作记录模板`
+* viewthread_node.htm `复节主体内容模板`
+* viewthread_node_body.htm `主题回复节点模板`
+* viewthread_pay.htm `主题支付模版`
+* viewthread_poll.htm `投票主题查看模板`
+* viewthread_reward.htm `悬赏主题查看模板`
+* viewthread_trade.htm `查看交易主题模板`
+
+### 群组模板文件夹 `./template/default/group/`
+* group.htm `浏览群组时的模板`
+* group_create.htm `群组创建模板`
+* group_index.htm `浏览群组时首页内容模板`
+* group_invite.htm `邀请参与群组的模板`
+* group_list.htm `群组列表文件`
+* group_manage.htm `管理群租的模板`
+* group_memberlist.htm `群组中参与用户的列表模板`
+* group_right.htm `群组右侧模板`
+* index.htm `群组首页模板`
+
+### 空间家园模版文件夹 `./template/default/home`
+* invite.htm `空间邀请模版`
+* magic_call.htm `通知好友魔法道具模板`
+* magic_doodle.htm `涂鸦魔法道具模板`
+* network.css `随便看看页样式文件`
+* space_album_list.htm `空间相册列表页模板`
+* space_album_pic.htm `空间相册图片模板`
+* space_album_view.htm `空间相册浏览模板`
+* space_blog_list.htm `空间日志列表模板`
+* space_blog_view.htm `空间日志浏览模版`
+* space_click.htm `表态模板《=？？？`
+* space_comment_li.htm `评论模板`
+* space_debate.htm `辩论模板`
+* space_diy.htm `空间diy模板`
+* space_doing.htm `心情记录模板`
+* space_doing_form.htm `心情记录发送模板`
+* space_doing_li.htm `心情记录列表模板`
+* space_favorite.htm `空间收藏模板`
+* space_feed_li.htm `feed事件列表模板`
+* space_footer.htm `空间底部模版`
+* space_friend.htm `空间好友模板`
+* space_group.htm `空间群组模板`
+* space_header.htm `空间头部模版`
+* space_home.htm `空间home页模板`
+* space_index.css `个人空间首页样式`
+* space_index.htm `个人空间首页模板`
+* space_list.htm `空间列表页模板`
+* space_magic.htm `空间魔法道具模板`
+* space_magic_mybox.htm `本人所拥有的魔法道具模板`
+* space_magic_shop.htm `魔法道具商城模板`
+* space_medal.htm `空间勋章模版`
+* space_menu.htm `空间菜单项模板`
+* space_notice.htm `空间公告模版`
+* space_pm.htm `空间短消息模板`
+* space_poll.htm `空间投票模板`
+* space_profile.htm `空间用户资料页模板`
+* space_share_form.htm `空间分享来源模板`
+* space_share_li.htm `空间分享模板`
+* space_share_list.htm `空间分享列表模板`
+* space_share_view.htm `空间分享查看模板`
+* space_thread.htm `空间主题帖模板`
+* space_top.htm `空间头部模版文件`
+* space_trade.htm `空间商品交易主题模板`
+* space_userabout.htm `空间用户面板模版`
+* space_videophoto.htm `视频相册模板`
+* space_wall.htm `个人空间留言板`
+* spacecp_click.htm `空间表态页面模板`
+* spacecp_search.htm `空间搜索页模板`
+* spacecp_share.htm `空间分享管理页模板`
+* spacecp_space.htm `空间管理页模板`
+* spacecp_userapp.htm `用户应用页模板`
+
+### 会员模板文件夹 `./template/default/member/`
+* getpasswd.htm `找回密码`
+* groupexpiry.htm `用户组期限模板`
+* login.htm `用户登录模板`
+* login_simple.htm `用户登录模块`
+* register.htm `用户注册模板`
+
+### 首页模板文件夹 `./template/default/portal/`
+* comment.htm `评论页模板`
+* comment_li.htm `评论操作模板`
+* index.htm `门户首页模板`
+* list.htm `门户新闻列表页面`
+* portal_topic_content.htm `门户专题页面,如添加新专题请创建portal_topic_xxx.htm页面,即可在专题创建时看到`
+* portalcp_article.htm `门户文章管理页面`
+* portalcp_block.htm `门户模块页面`
+* portalcp_category.htm `门户分类页面`
+* portalcp_comment.htm `门户管理评论操作模板`
+* portalcp_diy.htm `门户diy模板`
+* portalcp_index.htm `门户管理首页模板`
+* portalcp_portalblock.htm `门户管理模块`
+* portalcp_topic.htm `门户管理话题模板`
+* topic_footer.htm `话题底部模版`
+* topic_head.htm `话题顶部模版`
+* view.htm `查看页面`
+
+### 搜索结果模板文件夹  `./template/default/search`
+* album.htm `搜索相册结果`
+* album_list.htm `搜索相册列表结果`
+* blog.htm `搜索日志结果`
+* blog_list.htm `搜索日志列表结果`
+* footer.htm `页面底部`
+* forum.htm `论坛搜索页`
+* group.htm `群组搜索结果`
+* group_list.htm `群组搜索结果列表`
+* header.htm `页面顶部`
+* portal.htm `门户搜索结果`
+* portal_list.htm `门户搜索结果列表`
+* sortoption.htm `分类信息页面`
+* thread_list.htm `主题列表页面`
+* trade.htm `商品页面`
+
+### 会员应用模块模板文件夹` `./templage/default/userapp/`
+* userapp_app.htm `用户应用`
+* usreapp_index.htm `应用频道首页`
+* userapp_manage.htm `应用管理`
+* userapp_menu_list.htm `应用菜单列表`
+
+>PS.因工作需要又一次遇到了要学习这玩意的机会,然后是好记性不如烂笔头,于是就手动誊写了一份[官方默认模板文件说明](http://faq.comsenz.com/library/template/filelist/filelist_index.htm).
