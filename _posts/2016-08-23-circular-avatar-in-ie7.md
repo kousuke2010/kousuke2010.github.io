@@ -19,6 +19,7 @@ excerpt: #为空的清空默认摘要
 ### 初步解决方案
 * 对于 IE9+ 及其他兼容性好的浏览器直接使用 border-radius 和 background-size 实现圆形头像
 * 对于 IE7 和 IE8 上以一个上层(比如`a`标签)包裹两张图片，一张用户头像作为底层头像，一张中心圆形透明周边白色覆盖层(png图片)以position定位遮罩层
+* 针对 png 在低版本 IE 中的兼容
 * 以 IEhack 的形式对相关文件进行加载
 
 ### 代码实例
@@ -34,6 +35,15 @@ excerpt: #为空的清空默认摘要
     <div class="clear"></div>
 </div>
 <a href="javascript:void(0);" class="ganrao">底层添加干扰底色</a>
+<!-- 让png图片在IE6中正常显示 -->
+<!--[if IE 6]>
+    <script src="http://kousuke2010.github.io/assets/201608/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            DD_belatedPNG.fix('body *').not(".box img");
+        });
+    </script>
+<![endif]-->
 ```
 
 #### css
