@@ -6,7 +6,6 @@ categories: notes
 tags: jekyll
 permalink: /:categories/:month-:day-:title
 excerpt: #为空的清空默认摘要
-published: false
 ---
 在用 `gem install jekyll` 时出现错误信息:
 
