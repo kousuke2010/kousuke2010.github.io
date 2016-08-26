@@ -3,4 +3,60 @@ layout: single
 title: "convert to html"
 permalink: /tool/converttohtml
 ---
-editing..
+<h1>Convert to HTML</h1>
+<p>转化前的代码：</p>
+<div class="sourcecodearea">
+    <textarea name="sourcecode" id="sourcecode" rows="10"></textarea>
+    <a href="javascript:void(0);" class="clearcode">清空</a>
+</div>
+<p>转化后的代码：</p>
+<textarea name="newcode" id="newcode" rows="10"></textarea>
+
+<script>
+    $(function(){
+        // 新老代码转换
+        $('#sourcecode').on('keyup',function(){
+            var sourceCode = $(this).val();
+            var newCode;
+            newCode = sourceCode.replace(/\{/g,'&#123;')
+                                .replace(/\|/g,'&#124;')
+                                .replace(/\}/g,'&#125;')
+                                .replace(/\$/g,'&#36;')
+                                .replace(/\%/g,'&#37;')
+                                .replace(/\+/g,'&#43;')
+                                .replace(/\-/g,'&#45;');
+            $('#newcode').val(newCode);
+        });
+        // 清空按钮
+        $('.clearcode').on('click',function(){
+            $('#sourcecode,#newcode').val('');
+        });
+    });
+</script>
+
+<style>
+    p{margin-bottom:0;}
+    textarea{width:100%;font-size:15px;padding:8px;box-sizing:border-box;}
+    .sourcecodearea{
+        position: relative;
+    }
+    .clearcode{
+        width: 42px;
+        height: 18px;
+        display: block;
+        font-size: 12px;
+        color: #dadada;
+        line-height: 18px;
+        text-align: center;
+        border: 1px solid #dadada;
+        border-radius: .3em;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+    #sourcecode:hover+.clearcode,.clearcode:hover{
+        color: #9f9f9f;
+        border-color: #aaa;
+        text-decoration: none;
+    }
+</style>
