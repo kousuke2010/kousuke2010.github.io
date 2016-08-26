@@ -2,8 +2,8 @@
 layout: post
 title: "html字符实体(HTML Character Entities)"
 date: 2016-08-26 10:50:53 +0800
-categories:
-tags:
+categories: notes
+tags: html
 permalink: /:categories/:month-:day-:title
 excerpt: #为空的清空默认摘要
 ---
