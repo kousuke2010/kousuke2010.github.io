@@ -42,6 +42,9 @@ excerpt: #为空的清空默认摘要
 
 |结果  |描述                         |实体名称     |实体编号   |
 |:----:|:---------------------------:|:-----------:|:---------:|
+|#     |                             |             |&amp;#35;  |
+|$     |                             |             |&amp;#36;  |
+|%     |                             |             |&amp;#37;  |
 |      |non-breaking space           |&amp;nbsp;   |&amp;#160; |
 |¡     |inverted exclamation mark    |&amp;iexcl;  |&amp;#161; |
 |¢     |cent                         |&amp;cent;   |&amp;#162; |
