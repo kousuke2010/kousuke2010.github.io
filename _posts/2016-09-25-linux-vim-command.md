@@ -6,12 +6,12 @@ categories: notes
 tags: linux
 permalink: /:categories/:month-:day-:title
 excerpt: #为空的清空默认摘要
-published: false
+published: true
 ---
 最近接触到了 vim 编辑器，然后发现真的好难下手，然后还能怎么办呢？所以，只能了解一下了，不求一下子精通吧，但是就命令上全部上手一遍总是号的。
 
 ### 光标控制命令
-* K	向上移动一行 
+* K	向上移动一行
 * J	向下移动一行
 * H	向左移动一个字符
 * L	向右移动一个字符
@@ -40,10 +40,46 @@ published: false
 * :nrfile	读入制定 file 内容，并插入在第 n 行后
 
 ### 在 vim 中删除文本
-* 
-* 
-* 
-* 
-* 
+* x	删除光标处字符
+* db	删除光标前面的字
+* dw	删至下一个字的开头
+* dd	删除整行
+* :n,md	从第 m 行开始往前删除 n 行
+* d$	从光标处删除至行尾
+* d^	从光标处删除至行首
 
+### 在 vim 中查找与替换
+* /target   在文件中向前查找 target
+* ?target   在文件中向后查找 target
+* n 查找下一个
+* N 查找上一个
+* :setic	查找时忽略大小写
+* :setnoic	查找时对大小写敏感
+* %s/text1/text2/g	在整个文件中查找text1并替换为text2
 
+### 在 vim 中复制文本
+* yy	复制当前行
+* nyy	从当前行开始复制 n 行
+* p	粘贴至光标前
+* P	粘贴至光标后
+* u	撤销上一次修改
+* U	撤销所有修改
+
+### 保存和退出 vim
+* :w 保存文件但不退出
+* :wfile	将修改文件保存在 file 中但不退出
+* :wq 或 ZZ 或 :x	保存并退出
+* :q	不保存文件
+* :q!	不保存文件,强制退出
+* :e!	放弃所有修改,从上次保存文件开始再编辑
+
+### 其他选项
+* :set encoding=utf8	设定字符编码为 UTF-8
+* :setall	查看所有选项
+* :setnu	设置行号
+* :setshowmode	显示是输入模式还是替换模式
+* :set ts=4	为文本输入设置 tab stops
+* :setnonumber	取消显示行数
+* :.=	查看当前行的行号
+* :=	查看总行数
+* ctrl+g 显示文件名、当前行号、文件总行数、文件位置百分比
