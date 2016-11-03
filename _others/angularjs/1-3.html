@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>一个绑定页面元素的angular程序</title>
+	<script src="js/angular.min.js"></script>
+</head>
+<body>
+	<div ng-controller="usercontroller">
+		<input type="text" id="text1" ng-model="user.name">
+		<div>{{user.name}}</div>
+	</div>
+	<script>
+		function usercontroller($scope){
+			$scope.user={name:""};
+		}
+	</script>
+</body>
+</html>
