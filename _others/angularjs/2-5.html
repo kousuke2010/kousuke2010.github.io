@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="a2_5">
+<head>
+	<meta charset="UTF-8">
+	<title>通过表达式绑定$scope的方法</title>
+	<script src="js/angular.min.js"></script>
+</head>
+<body>
+	<div ng-controller="c2_5">
+		<span class="show">{{span_show()}}</span>
+	</div>
+	<script>
+		var a2_5 = angular.module('a2_5',[]);
+		a2_5.controller('c2_5',['$scope',function($scope){
+			$scope.text = 'Hello! Angular';
+			$scope.span_show = function(){
+				$scope.text = 'Welcome to the angular world!';
+				return $scope.text;
+			}
+		}]);
+	</script>
+</body>
+</html>
