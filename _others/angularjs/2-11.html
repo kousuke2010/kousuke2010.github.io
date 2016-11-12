@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="a2_11">
+<head>
+    <meta charset="UTF-8">
+    <title>添加元素样式</title>
+    <script src="js/angular.min.js"></script>
+    <style>
+        body{font-size:14px;font-family:'microsoft yahei light';}
+        ul{list-style-type:none;width:410px;margin:0;padding:0;}
+        ul li{width:100%;height:30px;display:block;line-height:30px;}
+        ul li.first{color:#f30;}
+        ul li.last{color:#999;}
+        ul li span{width:60px;float:left;padding:0 10px;}
+        ul .odd{color:#0026ff;}
+        ul .even{color:#ff0000;}
+        ul .bold{font-weight:bold;}
+        ul .focus{background-color:#ccc;}
+    </style>
+</head>
+<body>
+    <div ng-controller="c2_11">
+        <ul>
+            <li ng-class="{{bold}}">
+                <span>序号</span>
+                <span>姓名</span>
+                <span>性别</span>
+                <span>是否首条</span>
+                <span>是否尾条</span>
+            </li>
+            <li ng-class-odd="'odd'"
+                ng-class-even="'even'"
+                ng-repeat="stu in data"
+                ng-click='li_click($index)'
+                ng-class='{focus: $index==focus}'>
+                <span>{{$index+1}}</span>
+                <span>{{stu.name}}</span>
+                <span>{{stu.sex}}</span>
+                <span>{{$first?'是':'否'}}</span>
+                <span>{{$last?'是':'否'}}</span>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        var a2_11 = angular.module('a2_11',[]);
+        a2_11.controller('c2_11',['$scope',function($scope){
+            $scope.bold = 'bold';
+            $scope.li_click = function(i){
+                $scope.focus = i;
+            };
+            $scope.data = [
+                {name:"kousuke",sex:"male"},
+                {name:"lily",sex:"female"},
+                {name:"lucy",sex:"female"},
+                {name:"jony",sex:"male"},
+                {name:"liming",sex:"male"},
+                {name:"danie",sex:"male"},
+                {name:"kfc",sex:"male"}
+            ];
+        }]);
+    </script>
+</body>
+</html>

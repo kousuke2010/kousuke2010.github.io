@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="a2_12">
+<head>
+	<meta charset="UTF-8">
+	<title>控制元素显示和隐藏的状态</title>
+	<script src="js/angular.min.js"></script>
+	<style>
+		body{font-size:12px;}
+		ul{list-style-type:none;margin:0;padding:0;}
+		div{margin:8px 0;}
+	</style>
+</head>
+<body>
+	<div ng-controller="c2_22">
+		<div ng-show="{{isShow}}">陶国荣</div>
+		<div ng-hide="{{isHide}}">tao_guo_rong@126.com</div>
+		<ul ng-switch on="{{switch}}">
+			<li ng-switch-when="1">陶国荣</li>
+			<li ng-switch-when="2">tao_guo_rong@126.com</li>
+			<li ne-switch-default>更多...</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		var a2_12 = angular.module('a2_12',[]);
+		a2_12.controller('c2_22',['$scope',function($scope){
+			$scope.isShow = true;
+			$scope.isHide = false;
+			$scope.switch = 3;
+		}]);
+	</script>
+</body>
+</html>
