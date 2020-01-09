@@ -159,6 +159,7 @@ excerpt: "摘抄内容"
 `title` 文章所在文件的标题
 `categories` 为文章配置的目录，`Jekyll` 可以自动将 `//` 转换为 `/` ，所以如果没有目录，会自动忽略
 
-[rubylink]: http://www.ruby-lang.org/en/downloads/
-[_drafts学习链接]: http://jekyll.bootcss.com/docs/drafts/
-[yamllink]: http://yaml.org/
+>本文参考：
+[rubylink](http://www.ruby-lang.org/en/downloads/)｜
+[_drafts学习链接](http://jekyll.bootcss.com/docs/drafts/)｜
+[yamllink](http://yaml.org/)

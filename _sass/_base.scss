@@ -121,6 +121,14 @@ blockquote {
     > :last-child {
         margin-bottom: 0;
     }
+
+    a{
+        font-style: normal;
+        
+        &:hover{
+            text-decoration: none;
+        }
+    }
 }
 
 

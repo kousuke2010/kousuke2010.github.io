@@ -54,4 +54,5 @@ C:/Ruby21-x64
 
 如此, `Jekyll serve --watch` 就可以正常运行了。
 
-[rubyinstaller]:http://rubyinstaller.org/downloads
+>参考链接：
+[rubyinstaller](http://rubyinstaller.org/downloads)
