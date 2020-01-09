@@ -5,7 +5,7 @@ layout: default
   <h1 class="page-heading">千里之行，始于足下.</h1>
   <a href="/list" class="titleonly">☭仅展示标题</a>
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -16,6 +16,33 @@ layout: default
         <div class="post-excerpt">{{ post.excerpt }}</div>
       </li>
     {% endfor %}
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+      {% else %}
+        <span>&laquo; Prev</span>
+      {% endif %}
+      <small>｜</small>
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          {{ page }}
+        {% elsif page == 1 %}
+          <a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+        <small>｜</small>
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+      {% else %}
+        <span>Next &raquo;</span>
+      {% endif %}
+    </div>
+    {% endif %}
   </ul>
   <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">通过RSS订阅</a></p>
 </div>

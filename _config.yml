@@ -20,7 +20,7 @@ github_username:  kousuke2010
 
 # Paginator
 gems: [jekyll-paginate]
-paginate: 3 # 每页显示
+paginate: 8 # 每页显示
 paginate_path: "page:num"
 
 # 排除 build 文件
