@@ -2,8 +2,8 @@
 layout: post
 title: "添加valine评论插件"
 date: 2020-01-10 16:04:52 +0800
-categories: web
-tags: js
+categories: notes
+tags: jekyll js
 permalink: /:categories/:month-:day-:title
 excerpt: #为空的清空默认摘要
 published: true
