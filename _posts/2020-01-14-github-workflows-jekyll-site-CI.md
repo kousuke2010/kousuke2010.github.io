@@ -10,12 +10,14 @@ published: true
 ---
 这些天一直收到来自 `Github` 的邮件，起初我也没有去注意，直接点一下全部已读就过滤掉了，但是昨天抽空整理邮件的时候注意到又收到了一封邮件：
 
->邮件标题：Run failed: Jekyll site CI - master
-Run failed for master
-Repository: kousuke2010/kousuke2010.github.io
-Workflow: Jekyll site CI
-Duration: 4 minutes and 30.0 seconds
-Finished: 2020-01-13 07:28:01 UTC
+>**Title：**<br>
+Run failed: Jekyll site CI - master<br>
+**Content:**<br>
+Run failed for master<br>
+Repository: kousuke2010/kousuke2010.github.io<br>
+Workflow: Jekyll site CI<br>
+Duration: 4 minutes and 30.0 seconds<br>
+Finished: 2020-01-13 07:28:01 UTC<br>
 View results
 
 然后清楚了是 `Jekyll site CI` 运行错误了，顺着邮件中的 `View results` 链接去查看，了解到了以下报错：
