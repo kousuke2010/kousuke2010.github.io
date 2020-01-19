@@ -81,7 +81,7 @@ const printBoxDetail = ({length,width,height} = {}) =>{
 ```javascript
 // 常规
 function printStarWithMale(star,gender){
-	let stars = ['tangsan','fanqie','tiancan','xieshao'];	
+	let stars = ['tangsan','fanqie','tiancan','xieshao'];
 	
 	if(star){
 		if(stars.includes(star)){
@@ -91,7 +91,7 @@ function printStarWithMale(star,gender){
 			}
 		}
 	}else{
-		throw new Error('No star from list!')
+		throw new Error('No star from list!');
     }
 }
 
@@ -99,8 +99,19 @@ printStarWithMale(null);//No star from list!
 printStarWithMale('fanqie');//I like fanqie
 printStarWithMale('fanqie','male');//fanqie is a male star I like
 
-// 优化
-function printStarWithGender()
+// 优化1 少了一个嵌套层级,语法美感提升1级
+function printStarWithGender(star,gender){
+    let stars = ['tangsan','fanqie','tiancan','xieshao'];
+    if(!star) throw new Error('No star from list!');
+    if(stars.includes(star)){
+        console.log(I like ${star});
+        if(gender == 'male'){
+            console.log(${star} is a male star I like);
+        }
+    }
+}
+
+// 优化2 再次通过条件倒置减少一个嵌套层级
 ```
 
 >本文参考：[用JavaScript编写更好的条件语句](https://www.zcfy.cc/article/tips-to-write-better-conditionals-in-javascript-dev-community)

@@ -1,0 +1,54 @@
+D:\Github\kousuke2010.github.io>bundle exec jekyll serve                                                              
+  Please add the following to your Gemfile to avoid polling for changes:                               
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?                                                                                
+                                                                                                       
+D:\Github\kousuke2010.github.io>bundle exec jekyll serve                                               
+Could not find gem 'wdm (>= 0.1.0) x64-mingw32' in any of the gem sources listed in your Gemfile.      
+Run `bundle install` to install missing gems.                                                          
+                                                                                                       
+D:\Github\kousuke2010.github.io>bundle install                                                         
+Fetching gem metadata from https://rubygems.org/...........                                            
+Fetching gem metadata from https://rubygems.org/.                                                      
+Resolving dependencies...                                                                              
+Using public_suffix 4.0.3                                                                              
+Using addressable 2.7.0                                                                                
+Using bundler 2.1.4                                                                                    
+Using colorator 1.1.0                                                                                  
+Using concurrent-ruby 1.1.5                                                                            
+Using eventmachine 1.2.7 (x64-mingw32)                                                                 
+Using http_parser.rb 0.6.0                                                                             
+Using em-websocket 0.5.1                                                                               
+Using ffi 1.11.3 (x64-mingw32)                                                                         
+Using forwardable-extended 2.6.0                                                                       
+Using i18n 1.8.0                                                                                       
+Using sassc 2.2.1 (x64-mingw32)                                                                        
+Using jekyll-sass-converter 2.0.1                                                                      
+Using rb-fsevent 0.10.3                                                                                
+Using rb-inotify 0.10.1                                                                                
+Using listen 3.2.1                                                                                     
+Using jekyll-watch 2.2.1                                                                               
+Using kramdown 2.1.0                                                                                   
+Using kramdown-parser-gfm 1.1.0                                                                        
+Using liquid 4.0.3                                                                                     
+Using mercenary 0.3.6                                                                                  
+Using pathutil 0.16.2                                                                                  
+Using rouge 3.14.0                                                                                     
+Using safe_yaml 1.0.5                                                                                  
+Using unicode-display_width 1.6.0                                                                      
+Using terminal-table 1.8.0                                                                             
+Using jekyll 4.0.0                                                                                     
+Using jekyll-paginate 1.1.0                                                                            
+Fetching wdm 0.1.1                                                                                     
+Installing wdm 0.1.1 with native extensions                                                            
+Bundle complete! 3 Gemfile dependencies, 29 gems now installed.                                        
+Use `bundle info [gemname]` to see where a bundled gem is installed.                                   
+                                                                                                       
+D:\Github\kousuke2010.github.io>bundle exec jekyll serve                                               
+Configuration file: D:/Github/kousuke2010.github.io/_config.yml                                        
+            Source: D:/Github/kousuke2010.github.io                                                    
+       Destination: D:/Github/kousuke2010.github.io/_site                                              
+ Incremental build: disabled. Enable with --incremental                                                
+      Generating...                                                                                    
+                    done in 1.947 seconds.                                                             
+ Auto-regeneration: enabled for 'D:/Github/kousuke2010.github.io'                                      
+    Server address: http://127.0.0.1:4000/
